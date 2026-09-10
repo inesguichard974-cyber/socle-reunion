@@ -473,9 +473,109 @@ h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
   gap: 6px;
 }
 
+/* ==========================================================================
+   VERSION MOBILE — BOTTOM SHEET TACTILE (STYLE APPLE PLANS / AIRBNB)
+   ========================================================================== */
+
+/* Masqué sur ordinateur */
+.sheet-drag-handle {
+  display: none;
+}
+
 @media (max-width: 860px) {
-  .app-layout { flex-direction: column-reverse; }
-  .sidebar { width: calc(100% - 24px); height: 54vh; margin: 12px; }
-  .map-wrapper { height: 46vh; }
+  .app-layout {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* La carte prend TOUT l'écran du téléphone en arrière-plan */
+  .map-wrapper {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+
+  /* Le panneau devient un tiroir flottant au-dessus de la carte */
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    z-index: 1500;
+    border-radius: 24px 24px 0 0;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background: var(--glass-fill-strong);
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), height 0.35s ease;
+    touch-action: pan-y;
+  }
+
+  /* Poignée tactile visible uniquement sur mobile */
+  .sheet-drag-handle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0 4px;
+    cursor: grab;
+  }
+
+  .drag-pill {
+    width: 44px;
+    height: 5px;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  [data-theme="light"] .drag-pill {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  /* Les 3 hauteurs du tiroir */
+  .sidebar.sheet-collapsed {
+    height: 140px; /* Aperçu compact : laisse 80% de la carte visible */
+  }
+
+  .sidebar.sheet-collapsed .progress-box,
+  .sidebar.sheet-collapsed .tab-group,
+  .sidebar.sheet-collapsed .filter-row-label,
+  .sidebar.sheet-collapsed .chips-scroll,
+  .sidebar.sheet-collapsed .spots-list {
+    display: none; /* Cache les blocs secondaires pour ne garder que la recherche et la poignée */
+  }
+
+  .sidebar.sheet-half {
+    height: 50vh; /* Mi-hauteur */
+  }
+
+  .sidebar.sheet-expanded {
+    height: 88vh; /* Presque plein écran pour défiler confortablement */
+  }
+
+  .sidebar .header {
+    padding: 6px 18px 10px;
+  }
+
+  .sidebar .brand-title {
+    font-size: 18px;
+  }
+
+  .sidebar .progress-box {
+    padding: 8px 10px;
+  }
+
+  .route-panel {
+    bottom: 150px; /* Reste au-dessus du tiroir replié */
+    left: 12px;
+    right: 12px;
+    padding: 10px 14px;
+  }
+}
   .route-panel { bottom: 12px; left: 12px; right: 12px; justify-content: space-between; }
 }
