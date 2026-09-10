@@ -1,0 +1,2242 @@
+[
+  {
+    "id": "cap-noir-roche-verre-bouteille",
+    "nom": "Cap Noir et Roche Verre Bouteille",
+    "categorie": "Rando",
+    "micro_region": "Hauts",
+    "commune": "La Possession",
+    "description": "Boucle panoramique spectaculaire dominant l'entrée du cirque de Mafate depuis Dos d'Âne. Le sentier alterne forêt sèche, échelles et belvédères vertigineux.",
+    "coordonnees": {
+      "lat": -20.989824,
+      "lng": 55.390684
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "2h30",
+    "payant": false,
+    "conseil_local": "Partir tôt pour bénéficier d'une meilleure visibilité sur Mafate et éviter les fortes chaleurs."
+  },
+  {
+    "id": "chemin-des-anglais",
+    "nom": "Chemin pavé des Anglais",
+    "categorie": "Rando",
+    "micro_region": "Ouest",
+    "commune": "La Possession",
+    "description": "Ancienne voie pavée historique reliant La Possession à la Grande Chaloupe au-dessus de la côte. Les panoramas embrassent la mer, la route du Littoral et les falaises basaltiques.",
+    "coordonnees": {
+      "lat": -20.922961,
+      "lng": 55.337548
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "Prévoir beaucoup d'eau et éviter les heures les plus chaudes, car le sentier est très exposé."
+  },
+  {
+    "id": "savane-de-la-possession",
+    "nom": "Boucle de la Savane depuis le parc Rosthon",
+    "categorie": "Rando",
+    "micro_region": "Ouest",
+    "commune": "La Possession",
+    "description": "Petite balade familiale dans une savane sèche bordée de ravines et de végétation endémique. Elle offre une immersion rapide dans les paysages semi-arides de l'ouest.",
+    "coordonnees": {
+      "lat": -20.929664,
+      "lng": 55.335731
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "45 min",
+    "payant": false,
+    "conseil_local": "Idéal en matinée ou en fin d'après-midi lorsque la lumière révèle les reliefs de la côte."
+  },
+  {
+    "id": "tour-des-roches",
+    "nom": "Tour des Roches",
+    "categorie": "Balade",
+    "micro_region": "Ouest",
+    "commune": "Saint-Paul",
+    "description": "Route champêtre longeant les canaux et les bras de la rivière Saint-Paul entre champs, cases et bassins. C'est l'un des itinéraires les plus dépaysants des bas de l'ouest.",
+    "coordonnees": {
+      "lat": -21.001548,
+      "lng": 55.292811
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Faire une halte au bord de l'eau, mais rester prudent après les pluies lorsque les courants deviennent forts."
+  },
+  {
+    "id": "cap-la-houssaye",
+    "nom": "Cap La Houssaye",
+    "categorie": "Rando",
+    "micro_region": "Ouest",
+    "commune": "Saint-Paul",
+    "description": "Sentier littoral traversant une savane sèche emblématique ponctuée de filaos et de points de vue sur l'océan. Le site est aussi apprécié pour ses couchers de soleil et ses observations de baleines en saison.",
+    "coordonnees": {
+      "lat": -21.006982,
+      "lng": 55.245708
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Privilégier le lever ou le coucher du soleil et porter un chapeau, car il y a peu d'ombre."
+  },
+  {
+    "id": "sentier-pave-bellemene",
+    "nom": "Chemin pavé de Bellemène",
+    "categorie": "Rando",
+    "micro_region": "Hauts",
+    "commune": "Saint-Paul",
+    "description": "Ancien chemin pavé reliant les hauts de Saint-Paul et témoignant des déplacements d'autrefois. La balade traverse des paysages ruraux avec de belles ouvertures sur la baie.",
+    "coordonnees": {
+      "lat": -20.990482,
+      "lng": 55.286376
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Les pavés peuvent être glissants après la pluie : chaussures à semelle crantée recommandées."
+  },
+  {
+    "id": "bassin-vital",
+    "nom": "Bassin Vital",
+    "categorie": "Bassin",
+    "micro_region": "Hauts",
+    "commune": "Saint-Paul",
+    "description": "Bassin naturel installé dans la ravine Bernica, entouré de falaises et de végétation tropicale. Le site possède une forte dimension historique et légendaire dans la mémoire réunionnaise.",
+    "coordonnees": {
+      "lat": -20.995836,
+      "lng": 55.304853
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Ne pas s'y baigner après de fortes pluies et vérifier le niveau de l'eau avant de descendre."
+  },
+  {
+    "id": "bassin-pigeon",
+    "nom": "Bassin Pigeon",
+    "categorie": "Bassin",
+    "micro_region": "Hauts",
+    "commune": "Saint-Paul",
+    "description": "Petit bassin de la ravine Bernica accessible par un sentier sauvage et ombragé. L'ambiance y est plus intime que sur les sites de baignade côtiers.",
+    "coordonnees": {
+      "lat": -20.997482,
+      "lng": 55.306611
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Prévoir des chaussures d'eau et éviter les rochers humides, particulièrement glissants."
+  },
+  {
+    "id": "bassin-long-saint-paul",
+    "nom": "Bassin Long",
+    "categorie": "Bassin",
+    "micro_region": "Hauts",
+    "commune": "Saint-Paul",
+    "description": "Vasque naturelle creusée dans la ravine Bernica, appréciée pour son cadre verdoyant et son atmosphère paisible. L'accès comporte des passages irréguliers.",
+    "coordonnees": {
+      "lat": -20.994147,
+      "lng": 55.301946
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "La baignade n'est envisageable que par débit faible et après vérification des conditions locales."
+  },
+  {
+    "id": "plage-de-boucan-canot",
+    "nom": "Plage de Boucan Canot",
+    "categorie": "Bassin",
+    "micro_region": "Ouest",
+    "commune": "Saint-Paul",
+    "description": "Grande plage de sable clair bordée de filaos, connue pour son bassin naturel protégé et son ambiance balnéaire. La baignade dépend de la houle et des dispositifs de sécurité en place.",
+    "coordonnees": {
+      "lat": -21.016524,
+      "lng": 55.233876
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "Respecter impérativement les drapeaux et privilégier le bassin surveillé lorsque les vagues sont fortes."
+  },
+  {
+    "id": "lagon-de-lhermitage",
+    "nom": "Lagon de l'Hermitage",
+    "categorie": "Bassin",
+    "micro_region": "Ouest",
+    "commune": "Saint-Paul",
+    "description": "Lagon peu profond protégé par la barrière corallienne, particulièrement adapté à l'observation des poissons et aux sorties en famille. Les filaos et les aires ombragées en font un lieu emblématique de détente.",
+    "coordonnees": {
+      "lat": -21.061843,
+      "lng": 55.223874
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "Se baigner uniquement dans les zones autorisées et ne jamais marcher sur les coraux."
+  },
+  {
+    "id": "plage-de-trou-deau",
+    "nom": "Plage et lagon de Trou d'Eau",
+    "categorie": "Bassin",
+    "micro_region": "Ouest",
+    "commune": "La Saline-les-Bains",
+    "description": "Petite plage familiale donnant sur un lagon calme aux eaux transparentes. Le site est réputé pour le snorkeling, les couchers de soleil et son ambiance plus tranquille.",
+    "coordonnees": {
+      "lat": -21.095662,
+      "lng": 55.232284
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "Arriver tôt pour se garer facilement et utiliser des palmes courtes afin de limiter les contacts avec le récif."
+  },
+  {
+    "id": "plage-de-saint-leu",
+    "nom": "Lagon de Saint-Leu",
+    "categorie": "Bassin",
+    "micro_region": "Ouest",
+    "commune": "Saint-Leu",
+    "description": "Zone de baignade protégée au pied du centre-ville, avec un lagon agréable pour nager et observer les petits poissons. La promenade littorale et les restaurants voisins prolongent facilement la sortie.",
+    "coordonnees": {
+      "lat": -21.171582,
+      "lng": 55.288651
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "Consulter le drapeau de baignade et éviter les zones peu profondes à marée basse pour préserver les coraux."
+  },
+  {
+    "id": "maido-belvedere",
+    "nom": "Belvédère du Maïdo",
+    "categorie": "Point de vue",
+    "micro_region": "Hauts",
+    "commune": "Saint-Paul",
+    "description": "Balcon spectaculaire suspendu au-dessus du cirque de Mafate, avec une vue plongeante sur les remparts et les îlets. C'est l'un des panoramas les plus emblématiques de La Réunion.",
+    "coordonnees": {
+      "lat": -21.071612,
+      "lng": 55.383724
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h",
+    "payant": false,
+    "conseil_local": "Arriver avant 8 heures pour limiter les nuages et prévoir une veste chaude, même en saison sèche."
+  },
+  {
+    "id": "dos-dane-belvedere",
+    "nom": "Belvédère de Dos d'Âne",
+    "categorie": "Point de vue",
+    "micro_region": "Hauts",
+    "commune": "La Possession",
+    "description": "Point de vue accessible depuis le village de Dos d'Âne offrant une première lecture impressionnante du cirque de Mafate. Le paysage change rapidement selon les nuages et la lumière.",
+    "coordonnees": {
+      "lat": -20.990272,
+      "lng": 55.393481
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "45 min",
+    "payant": false,
+    "conseil_local": "Prévoir une marge horaire car les nuages peuvent fermer le panorama en quelques minutes."
+  },
+  {
+    "id": "pointe-au-sel",
+    "nom": "Pointe au Sel",
+    "categorie": "Point de vue",
+    "micro_region": "Ouest",
+    "commune": "Saint-Leu",
+    "description": "Paysage volcanique battu par les vagues, connu pour ses anciens bassins salins, ses souffleurs et ses falaises noires. Le contraste entre l'océan et la savane sèche est particulièrement saisissant.",
+    "coordonnees": {
+      "lat": -21.220457,
+      "lng": 55.286493
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h",
+    "payant": false,
+    "conseil_local": "Rester à distance du bord des falaises et ne pas s'approcher des souffleurs lorsque la mer est agitée."
+  },
+  {
+    "id": "musee-de-villèle",
+    "nom": "Musée historique de Villèle",
+    "categorie": "Culture",
+    "micro_region": "Ouest",
+    "commune": "Saint-Paul",
+    "description": "Ancienne propriété sucrière transformée en musée, elle raconte l'histoire sociale, économique et coloniale de La Réunion. Le domaine comprend une grande maison, une chapelle et plusieurs espaces patrimoniaux.",
+    "coordonnees": {
+      "lat": -21.008328,
+      "lng": 55.267163
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "2h",
+    "payant": true,
+    "conseil_local": "Vérifier les jours d'ouverture et réserver lorsqu'une visite guidée ou une exposition temporaire vous intéresse."
+  },
+  {
+    "id": "cimetiere-marin-saint-paul",
+    "nom": "Cimetière marin de Saint-Paul",
+    "categorie": "Culture",
+    "micro_region": "Ouest",
+    "commune": "Saint-Paul",
+    "description": "Cimetière historique installé entre la plage et le centre ancien, où reposent plusieurs figures de l'histoire réunionnaise. Les filaos, les tombes anciennes et l'océan créent une atmosphère singulière.",
+    "coordonnees": {
+      "lat": -21.010496,
+      "lng": 55.271109
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "45 min",
+    "payant": false,
+    "conseil_local": "Associer la visite à une promenade dans le centre historique et au marché forain du front de mer."
+  },
+  {
+    "id": "marche-forain-de-saint-paul",
+    "nom": "Marché forain de Saint-Paul",
+    "categorie": "Culture",
+    "micro_region": "Ouest",
+    "commune": "Saint-Paul",
+    "description": "Grand marché coloré installé sur le front de mer, réputé pour ses fruits, épices, fleurs, artisanat et spécialités créoles. Il constitue un excellent concentré de saveurs et de savoir-faire réunionnais.",
+    "coordonnees": {
+      "lat": -21.011822,
+      "lng": 55.270472
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Y aller tôt le week-end pour profiter du meilleur choix et éviter les fortes chaleurs."
+  },
+  {
+    "id": "musee-stella-matutina",
+    "nom": "Musée Stella Matutina",
+    "categorie": "Culture",
+    "micro_region": "Ouest",
+    "commune": "Saint-Leu",
+    "description": "Ancienne usine sucrière transformée en musée consacré à l'histoire du sucre et aux évolutions de la société réunionnaise. Les machines, les objets et les espaces scénographiés permettent de comprendre l'industrie sucrière locale.",
+    "coordonnees": {
+      "lat": -21.188631,
+      "lng": 55.292814
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "2h30",
+    "payant": true,
+    "conseil_local": "Prévoir au moins deux heures et vérifier la programmation des expositions ou animations avant la visite."
+  },
+  {
+    "id": "kour-karavelle-saint-leu",
+    "nom": "Centre-ville historique et front de mer de Saint-Leu",
+    "categorie": "Culture",
+    "micro_region": "Ouest",
+    "commune": "Saint-Leu",
+    "description": "Parcours urbain entre église, anciennes maisons, marché, port et promenade littorale. Le secteur permet de découvrir le patrimoine maritime et créole de Saint-Leu à pied.",
+    "coordonnees": {
+      "lat": -21.170911,
+      "lng": 55.288273
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Faire le parcours en fin d'après-midi pour combiner patrimoine, baignade et coucher de soleil."
+  },
+  {
+    "id": "parapente-saint-leu",
+    "nom": "Vol en parapente au-dessus de Saint-Leu",
+    "categorie": "Loisir",
+    "micro_region": "Hauts",
+    "commune": "Saint-Leu",
+    "description": "Vol biplace depuis les hauts de Saint-Leu avec vue sur le lagon, la côte ouest et les pentes volcaniques. Les conditions aérologiques de la zone sont réputées pour les vols panoramiques.",
+    "coordonnees": {
+      "lat": -21.187481,
+      "lng": 55.310744
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "2h",
+    "payant": true,
+    "conseil_local": "Réserver auprès d'une école professionnelle et prévoir une matinée ou une fin d'après-midi selon la météo."
+  },
+  {
+    "id": "plongee-saint-gilles",
+    "nom": "Plongée et snorkeling à Saint-Gilles-les-Bains",
+    "categorie": "Loisir",
+    "micro_region": "Ouest",
+    "commune": "Saint-Paul",
+    "description": "La baie de Saint-Gilles donne accès à des récifs, tombants et épaves selon les niveaux. Des clubs proposent des baptêmes, explorations et sorties snorkeling dans les secteurs autorisés.",
+    "coordonnees": {
+      "lat": -21.009108,
+      "lng": 55.226842
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "Demi-journée",
+    "payant": true,
+    "conseil_local": "Choisir un club déclaré et respecter les zones de baignade, la réserve marine et les consignes des moniteurs."
+  },
+  {
+    "id": "foret-de-tevelave-accrobranche",
+    "nom": "Accrobranche de la forêt de Tévelave",
+    "categorie": "Loisir",
+    "micro_region": "Hauts",
+    "commune": "Les Avirons",
+    "description": "Parcours acrobatiques installés dans une forêt fraîche des hauts de l'ouest, avec tyroliennes et ateliers adaptés à plusieurs niveaux. L'expérience combine activité sportive et découverte de la végétation d'altitude.",
+    "coordonnees": {
+      "lat": -21.212944,
+      "lng": 55.361884
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "Demi-journée",
+    "payant": true,
+    "conseil_local": "Réserver en période de vacances et porter une tenue sportive avec des chaussures fermées."
+  },
+  {
+    "id": "marche-forain-saint-leu",
+    "nom": "Marché forain de Saint-Leu",
+    "categorie": "Culture",
+    "micro_region": "Ouest",
+    "commune": "Saint-Leu",
+    "description": "Marché convivial du front de mer où se mêlent produits agricoles, samoussas, achards, artisanat et musique réunionnaise. C'est un rendez-vous privilégié pour goûter l'ouest au quotidien.",
+    "coordonnees": {
+      "lat": -21.171941,
+      "lng": 55.288945
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Venir tôt le samedi matin pour éviter la chaleur et trouver facilement une place de stationnement."
+  },
+  {
+    "id": "front-de-mer-saint-gilles-sunset",
+    "nom": "Front de mer de Saint-Gilles-les-Bains",
+    "categorie": "Sunset",
+    "micro_region": "Ouest",
+    "commune": "Saint-Paul",
+    "description": "Promenade animée bordée de restaurants, de filaos et de petites plages, idéale pour admirer le soleil disparaître sur l'océan. Les terrasses et les rondavelles donnent au site une ambiance de vacances toute l'année.",
+    "coordonnees": {
+      "lat": -21.009358,
+      "lng": 55.226173
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Arriver environ 45 minutes avant le coucher du soleil pour trouver une place et choisir une terrasse."
+  },
+  {
+    "id": "plage-des-brisants-sunset",
+    "nom": "Plage des Brisants",
+    "categorie": "Sunset",
+    "micro_region": "Ouest",
+    "commune": "Saint-Paul",
+    "description": "Large espace côtier près du port de Saint-Gilles, apprécié pour ses couchers de soleil, ses paillotes et son ambiance sportive. Les vagues et les rochers y rendent la baignade déconseillée.",
+    "coordonnees": {
+      "lat": -21.014136,
+      "lng": 55.223608
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Profiter des tables et restaurants voisins, mais rester en retrait du bord lorsque la houle est forte."
+  },
+  {
+    "id": "aire-pique-nique-hermitage",
+    "nom": "Aires de pique-nique de l'Hermitage",
+    "categorie": "Sunset",
+    "micro_region": "Ouest",
+    "commune": "Saint-Paul",
+    "description": "Sous les filaos, les espaces aménagés longent le lagon de l'Hermitage et offrent un cadre privilégié pour déjeuner ou prendre l'apéritif face à la mer. Le site combine ombre, sable blanc et accès facile au littoral.",
+    "coordonnees": {
+      "lat": -21.061236,
+      "lng": 55.224359
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "Arriver avant midi le week-end, apporter un sac pour ses déchets et éviter les zones de baignade interdites."
+  },
+  {
+    "id": "pointe-des-chateaux-sunset",
+    "nom": "Pointe des Châteaux",
+    "categorie": "Sunset",
+    "micro_region": "Ouest",
+    "commune": "Saint-Leu",
+    "description": "Promontoire volcanique avançant dans l'océan, offrant une vue dégagée sur la côte et les reliefs de l'ouest. Les couleurs du soir mettent en valeur les falaises et les vagues qui frappent la pointe.",
+    "coordonnees": {
+      "lat": -21.226734,
+      "lng": 55.285047
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h",
+    "payant": false,
+    "conseil_local": "Rester derrière les barrières naturelles et s'éloigner des falaises, même par mer apparemment calme."
+  },
+  {
+    "id": "sentier-littoral-sainte-marie",
+    "nom": "Sentier littoral de Sainte-Marie",
+    "categorie": "Rando",
+    "micro_region": "Est",
+    "commune": "Sainte-Marie",
+    "description": "Balade côtière entre falaises, champs de canne et vues ouvertes sur l'océan Indien. Le parcours offre une découverte paisible du littoral nord-est de l'île.",
+    "coordonnees": {
+      "lat": -20.896812,
+      "lng": 55.550274
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Partir tôt ou en fin d'après-midi pour éviter le soleil direct et la chaleur."
+  },
+  {
+    "id": "ilet-bethleem",
+    "nom": "Ilet Bethléem",
+    "categorie": "Sunset",
+    "micro_region": "Est",
+    "commune": "Saint-Benoît",
+    "description": "Ancien lieu de villégiature au bord de la rivière des Marsouins, entouré de végétation tropicale et de grands arbres. Le site est apprécié pour les pique-niques, les baignades prudentes et son atmosphère familiale.",
+    "coordonnees": {
+      "lat": -21.029854,
+      "lng": 55.716644
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "Éviter la rivière après de fortes pluies et arriver tôt les dimanches et jours fériés."
+  },
+  {
+    "id": "sentier-pecheurs-sainte-rose",
+    "nom": "Sentier des pêcheurs de Sainte-Rose",
+    "categorie": "Rando",
+    "micro_region": "Est",
+    "commune": "Sainte-Rose",
+    "description": "Promenade littorale entre falaises volcaniques, végétation tropicale et petits abris de pêcheurs. Elle permet de découvrir un littoral sauvage marqué par les coulées de lave.",
+    "coordonnees": {
+      "lat": -21.121941,
+      "lng": 55.796217
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Rester éloigné du bord lors des épisodes de houle et porter des chaussures adaptées aux roches volcaniques."
+  },
+  {
+    "id": "foret-de-belouve",
+    "nom": "Forêt de Bélouve",
+    "categorie": "Rando",
+    "micro_region": "Hauts",
+    "commune": "Salazie",
+    "description": "Forêt primaire humide dominée par les tamarins des Hauts, les fougères arborescentes et les mousses. Les sentiers plongent dans l'un des paysages forestiers les plus emblématiques de La Réunion.",
+    "coordonnees": {
+      "lat": -21.100483,
+      "lng": 55.590012
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "Prévoir une veste imperméable : la brume et la pluie sont fréquentes, même par beau temps sur la côte."
+  },
+  {
+    "id": "point-de-vue-trou-de-fer",
+    "nom": "Point de vue du Trou de Fer",
+    "categorie": "Point de vue",
+    "micro_region": "Hauts",
+    "commune": "Salazie",
+    "description": "Belvédère spectaculaire sur une gorge profonde où se déversent de hautes cascades au cœur de la forêt primaire. Le site constitue l'un des panoramas naturels les plus impressionnants de l'île.",
+    "coordonnees": {
+      "lat": -21.094671,
+      "lng": 55.595842
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "4h",
+    "payant": false,
+    "conseil_local": "Partir très tôt pour limiter les risques de brouillard et vérifier l'état du sentier avant le départ."
+  },
+  {
+    "id": "grand-etang",
+    "nom": "Grand Étang",
+    "categorie": "Rando",
+    "micro_region": "Hauts",
+    "commune": "Saint-Benoît",
+    "description": "Lac volcanique entouré de remparts verdoyants, de cascades et de pâturages d'altitude. Le tour du plan d'eau offre une immersion accessible dans les paysages humides de l'Est.",
+    "coordonnees": {
+      "lat": -21.135562,
+      "lng": 55.634871
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h30",
+    "payant": false,
+    "conseil_local": "Le terrain devient boueux après la pluie : chaussures imperméables vivement recommandées."
+  },
+  {
+    "id": "piton-de-lanchaing",
+    "nom": "Piton d'Anchaing",
+    "categorie": "Rando",
+    "micro_region": "Cirques",
+    "commune": "Salazie",
+    "description": "Sommet emblématique dominant le cirque de Salazie avec une vue exceptionnelle sur les îlets et les remparts. La montée est raide mais récompensée par un panorama à 360 degrés.",
+    "coordonnees": {
+      "lat": -21.038759,
+      "lng": 55.536517
+    },
+    "difficulte": "Difficile",
+    "duree_estimee": "5h",
+    "payant": false,
+    "conseil_local": "Éviter les jours humides : les racines et les pentes deviennent très glissantes."
+  },
+  {
+    "id": "trois-cascades-hell-bourg",
+    "nom": "Sentier des Trois Cascades",
+    "categorie": "Rando",
+    "micro_region": "Cirques",
+    "commune": "Salazie",
+    "description": "Boucle forestière au départ d'Hell-Bourg menant à plusieurs chutes d'eau dans une végétation luxuriante. Le parcours combine fraîcheur, sous-bois et ambiance de cirque tropical.",
+    "coordonnees": {
+      "lat": -21.064943,
+      "lng": 55.520747
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "3h",
+    "payant": false,
+    "conseil_local": "Prévoir des chaussures adhérentes et ne pas s'approcher des vasques après des pluies importantes."
+  },
+  {
+    "id": "bassin-la-paix",
+    "nom": "Bassin La Paix",
+    "categorie": "Bassin",
+    "micro_region": "Est",
+    "commune": "Bras-Panon",
+    "description": "Bassin naturel creusé dans la rivière du Mât, entouré de roches basaltiques et de végétation abondante. Le site est réputé pour ses eaux fraîches et son cadre idéal pour un pique-nique.",
+    "coordonnees": {
+      "lat": -21.011688,
+      "lng": 55.679821
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Ne pas se baigner lorsque le courant est fort et rester attentif aux variations rapides du niveau de l'eau."
+  },
+  {
+    "id": "bassin-la-mer",
+    "nom": "Bassin La Mer",
+    "categorie": "Bassin",
+    "micro_region": "Est",
+    "commune": "Bras-Panon",
+    "description": "Vasque naturelle située dans un environnement boisé et humide, appréciée pour son calme et la fraîcheur de la rivière. L'accès permet de découvrir les paysages aquatiques typiques de l'Est.",
+    "coordonnees": {
+      "lat": -20.999274,
+      "lng": 55.686432
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Porter des chaussures d'eau et renoncer à la baignade dès que l'eau devient trouble ou rapide."
+  },
+  {
+    "id": "bassin-bleu-saint-benoit",
+    "nom": "Bassin Bleu",
+    "categorie": "Bassin",
+    "micro_region": "Est",
+    "commune": "Saint-Benoît",
+    "description": "Bassin d'eau douce aux teintes bleutées installé dans un écrin de végétation tropicale. C'est un lieu apprécié pour se rafraîchir et profiter d'une ambiance très verdoyante.",
+    "coordonnees": {
+      "lat": -21.053768,
+      "lng": 55.727885
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Vérifier les conditions de courant avant toute baignade et éviter les rochers couverts d'algues."
+  },
+  {
+    "id": "bassin-mangue",
+    "nom": "Bassin Mangue",
+    "categorie": "Bassin",
+    "micro_region": "Est",
+    "commune": "Saint-Benoît",
+    "description": "Bassin naturel de la région bénédictine entouré de végétation dense et de roches volcaniques. Son cadre ombragé en fait une halte agréable lors d'une journée dans l'Est.",
+    "coordonnees": {
+      "lat": -21.045387,
+      "lng": 55.722164
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "L'accès peut être glissant : prévoir des chaussures adaptées et éviter les jours de fortes pluies."
+  },
+  {
+    "id": "cascade-blanche-salazie",
+    "nom": "Cascade Blanche",
+    "categorie": "Point de vue",
+    "micro_region": "Cirques",
+    "commune": "Salazie",
+    "description": "Grande chute d'eau visible depuis la route et les sentiers du cirque de Salazie. Elle s'inscrit dans un paysage de falaises couvertes de végétation et de cascades permanentes.",
+    "coordonnees": {
+      "lat": -21.028664,
+      "lng": 55.527442
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "45 min",
+    "payant": false,
+    "conseil_local": "S'arrêter uniquement sur les emplacements prévus et rester prudent près des accotements."
+  },
+  {
+    "id": "voile-de-la-mariee-salazie",
+    "nom": "Voile de la Mariée",
+    "categorie": "Point de vue",
+    "micro_region": "Cirques",
+    "commune": "Salazie",
+    "description": "Ensemble de cascades descendant les parois verdoyantes du cirque de Salazie comme un long voile blanc. Le spectacle est particulièrement impressionnant après les pluies.",
+    "coordonnees": {
+      "lat": -21.052318,
+      "lng": 55.541853
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "30 min",
+    "payant": false,
+    "conseil_local": "La cascade est souvent plus abondante après la pluie, mais la visibilité peut alors être réduite par les nuages."
+  },
+  {
+    "id": "anse-des-cascades",
+    "nom": "Anse des Cascades",
+    "categorie": "Sunset",
+    "micro_region": "Est",
+    "commune": "Sainte-Rose",
+    "description": "Anse verdoyante bordée de cascades, de vacoas et de filaos, avec une petite marine traditionnelle. Le site est idéal pour une balade côtière et un pique-nique dans un décor volcanique.",
+    "coordonnees": {
+      "lat": -21.196738,
+      "lng": 55.782461
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Arriver tôt les week-ends et rester à distance des vagues sur les secteurs rocheux."
+  },
+  {
+    "id": "pont-suspendu-riviere-de-lest",
+    "nom": "Pont suspendu de la Rivière de l'Est",
+    "categorie": "Point de vue",
+    "micro_region": "Est",
+    "commune": "Sainte-Rose",
+    "description": "Ouvrage historique franchissant une vallée profonde au-dessus de la rivière de l'Est. Le pont offre un point de vue saisissant sur les reliefs et la végétation luxuriante du secteur.",
+    "coordonnees": {
+      "lat": -21.158927,
+      "lng": 55.741666
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "30 min",
+    "payant": false,
+    "conseil_local": "Respecter les restrictions d'accès et éviter de s'engager sur l'ouvrage par vent fort."
+  },
+  {
+    "id": "notre-dame-des-laves",
+    "nom": "Église Notre-Dame-des-Laves",
+    "categorie": "Culture",
+    "micro_region": "Est",
+    "commune": "Sainte-Rose",
+    "description": "Église célèbre pour avoir été épargnée par une coulée de lave lors de l'éruption de 1977. Les traces volcaniques autour de l'édifice racontent un épisode majeur de l'histoire récente de l'île.",
+    "coordonnees": {
+      "lat": -21.184781,
+      "lng": 55.744108
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "45 min",
+    "payant": false,
+    "conseil_local": "Associer la visite à une halte sur la route des coulées et respecter les horaires d'ouverture de l'église."
+  },
+  {
+    "id": "maison-folio",
+    "nom": "Maison Folio",
+    "categorie": "Culture",
+    "micro_region": "Cirques",
+    "commune": "Salazie",
+    "description": "Villa créole historique d'Hell-Bourg entourée d'un jardin luxuriant, de kiosques et d'éléments décoratifs d'époque. La visite plonge dans l'art de vivre des familles aisées des Hauts autrefois.",
+    "coordonnees": {
+      "lat": -21.061868,
+      "lng": 55.520011
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "1h",
+    "payant": true,
+    "conseil_local": "Privilégier une visite guidée pour comprendre les usages de chaque pièce et du jardin créole."
+  },
+  {
+    "id": "hell-bourg-cases-creoles",
+    "nom": "Circuit des cases créoles d'Hell-Bourg",
+    "categorie": "Culture",
+    "micro_region": "Cirques",
+    "commune": "Salazie",
+    "description": "Promenade dans l'un des plus beaux villages créoles de La Réunion, entre maisons colorées, lambrequins et jardins fleuris. Le parcours révèle l'architecture traditionnelle des Hauts.",
+    "coordonnees": {
+      "lat": -21.063117,
+      "lng": 55.519262
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Prendre le temps de parcourir les petites rues à pied plutôt que de se limiter à l'axe principal."
+  },
+  {
+    "id": "cooperative-provanille",
+    "nom": "Coopérative Provanille",
+    "categorie": "Culture",
+    "micro_region": "Est",
+    "commune": "Bras-Panon",
+    "description": "Visite consacrée à la vanille Bourbon, de la pollinisation manuelle au séchage et à la préparation des gousses. Elle permet de comprendre une culture agricole emblématique de l'Est.",
+    "coordonnees": {
+      "lat": -20.996244,
+      "lng": 55.681917
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "1h30",
+    "payant": true,
+    "conseil_local": "Réserver une visite guidée et profiter de la boutique pour comparer les différents grades de vanille."
+  },
+  {
+    "id": "temple-du-colosse",
+    "nom": "Temple du Colosse",
+    "categorie": "Culture",
+    "micro_region": "Est",
+    "commune": "Saint-André",
+    "description": "Temple hindou coloré installé dans le quartier du Colosse, témoignant de la richesse culturelle et religieuse de l'Est réunionnais. Son architecture et ses décors offrent une découverte marquante du patrimoine tamoul.",
+    "coordonnees": {
+      "lat": -20.942551,
+      "lng": 55.651124
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "45 min",
+    "payant": false,
+    "conseil_local": "Demander l'autorisation avant d'entrer dans les espaces cultuels et porter une tenue respectueuse."
+  },
+  {
+    "id": "tunnel-lave-sainte-rose",
+    "nom": "Tunnel de lave de Sainte-Rose",
+    "categorie": "Loisir",
+    "micro_region": "Est",
+    "commune": "Sainte-Rose",
+    "description": "Exploration souterraine d'une ancienne coulée de lave solidifiée sur le littoral volcanique. Les tunnels révèlent des textures, stalactites de lave et formes géologiques uniques.",
+    "coordonnees": {
+      "lat": -21.188724,
+      "lng": 55.758341
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "2h30",
+    "payant": true,
+    "conseil_local": "Visiter uniquement avec un guide spécialisé, avec casque, lampe frontale et chaussures fermées."
+  },
+  {
+    "id": "rafting-riviere-des-marsouins",
+    "nom": "Rafting sur la rivière des Marsouins",
+    "categorie": "Loisir",
+    "micro_region": "Est",
+    "commune": "Saint-Benoît",
+    "description": "Descente sportive de la rivière des Marsouins à travers un environnement tropical luxuriant. L'activité permet de découvrir les paysages de l'Est depuis l'eau, avec un encadrement professionnel.",
+    "coordonnees": {
+      "lat": -21.048196,
+      "lng": 55.713845
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "Demi-journée",
+    "payant": true,
+    "conseil_local": "Réserver auprès d'un prestataire agréé et vérifier les conditions de débit avant la sortie."
+  },
+  {
+    "id": "canyoning-riviere-des-roches",
+    "nom": "Canyoning dans la rivière des Roches",
+    "categorie": "Loisir",
+    "micro_region": "Est",
+    "commune": "Bras-Panon",
+    "description": "Parcours aquatique entre cascades, vasques et roches basaltiques dans l'un des secteurs les plus humides de l'île. Plusieurs itinéraires permettent une pratique découverte ou plus sportive.",
+    "coordonnees": {
+      "lat": -21.008671,
+      "lng": 55.692754
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "Demi-journée",
+    "payant": true,
+    "conseil_local": "Pratiquer exclusivement avec un guide diplômé et renoncer à la sortie après de fortes pluies."
+  },
+  {
+    "id": "marche-forain-bras-panon",
+    "nom": "Marché forain de Bras-Panon",
+    "categorie": "Culture",
+    "micro_region": "Est",
+    "commune": "Bras-Panon",
+    "description": "Marché local consacré aux fruits, légumes, épices, produits transformés et spécialités de l'Est. Il offre une immersion dans l'agriculture réunionnaise et les saveurs de la région.",
+    "coordonnees": {
+      "lat": -20.996927,
+      "lng": 55.679562
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Venir tôt pour profiter des produits les plus frais et prévoir de la monnaie pour les petits producteurs."
+  },
+  {
+    "id": "aire-pique-nique-grand-etang",
+    "nom": "Aire de pique-nique du Grand Étang",
+    "categorie": "Sunset",
+    "micro_region": "Hauts",
+    "commune": "Saint-Benoît",
+    "description": "Espace de pause au bord d'un lac volcanique entouré de remparts et de cascades. L'ambiance calme et fraîche contraste fortement avec le climat chaud du littoral.",
+    "coordonnees": {
+      "lat": -21.136344,
+      "lng": 55.635944
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Prévoir des vêtements chauds et repartir avec ses déchets, car le site est particulièrement sensible."
+  },
+  {
+    "id": "port-sainte-rose-sunset",
+    "nom": "Port de Sainte-Rose",
+    "categorie": "Sunset",
+    "micro_region": "Est",
+    "commune": "Sainte-Rose",
+    "description": "Petit port de pêche et de plaisance installé au pied des paysages volcaniques du Grand Brûlé. C'est un endroit agréable pour observer les lumières du soir sur l'océan et les reliefs côtiers.",
+    "coordonnees": {
+      "lat": -21.127562,
+      "lng": 55.796981
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h",
+    "payant": false,
+    "conseil_local": "Rester sur les zones aménagées et éviter les digues lorsque la mer est agitée."
+  },
+  {
+    "id": "aire-pique-nique-ilet-coco",
+    "nom": "Ilet Coco",
+    "categorie": "Sunset",
+    "micro_region": "Est",
+    "commune": "Saint-Benoît",
+    "description": "Petit espace naturel au bord de la rivière des Marsouins, accessible pour une pause au cœur d'une végétation dense. Le cadre est adapté à un pique-nique calme et à une découverte des paysages fluviaux.",
+    "coordonnees": {
+      "lat": -21.030821,
+      "lng": 55.703429
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "Surveiller les enfants près de l'eau et éviter toute baignade lorsque la rivière est chargée."
+  },
+  {
+    "id": "plage-grande-anse",
+    "nom": "Plage de Grande Anse",
+    "categorie": "Sunset",
+    "micro_region": "Sud",
+    "commune": "Petite-Île",
+    "description": "Anse spectaculaire bordée de cocotiers, de filaos et de falaises basaltiques. Le bassin naturel protégé par une barrière rocheuse permet une baignade prudente lorsque les conditions sont favorables.",
+    "coordonnees": {
+      "lat": -21.376842,
+      "lng": 55.575921
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "La baignade est déconseillée hors du bassin surveillé ou lorsque la mer est agitée ; arriver tôt les week-ends."
+  },
+  {
+    "id": "pique-nique-grande-anse",
+    "nom": "Aire de pique-nique de Grande Anse",
+    "categorie": "Sunset",
+    "micro_region": "Sud",
+    "commune": "Petite-Île",
+    "description": "Sous les filaos, les tables donnent sur l'une des anses les plus photogéniques du sud. Le site est idéal pour un pique-nique créole face aux falaises et à l'océan.",
+    "coordonnees": {
+      "lat": -21.376184,
+      "lng": 55.576842
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Réserver une table tôt le dimanche et prévoir un sac pour remporter ses déchets."
+  },
+  {
+    "id": "bassin-de-manapany",
+    "nom": "Bassin de Manapany",
+    "categorie": "Bassin",
+    "micro_region": "Sud",
+    "commune": "Saint-Joseph",
+    "description": "Bassin marin naturel installé entre les roches noires de Manapany-les-Bains. Il offre un cadre emblématique pour observer la côte volcanique et se baigner uniquement lorsque la mer est calme.",
+    "coordonnees": {
+      "lat": -21.376914,
+      "lng": 55.581982
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Respecter les interdictions de baignade et ne jamais franchir la barrière rocheuse par forte houle."
+  },
+  {
+    "id": "sentier-littoral-manapany-cap-jaune",
+    "nom": "Sentier littoral de Manapany à Cap Jaune",
+    "categorie": "Rando",
+    "micro_region": "Sud",
+    "commune": "Saint-Joseph",
+    "description": "Itinéraire côtier sauvage entre falaises, végétation tropicale et panoramas sur l'océan. Le sentier rejoint les environs de Vincendo et révèle les contrastes du Sud Sauvage.",
+    "coordonnees": {
+      "lat": -21.389676,
+      "lng": 55.623948
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "Partir tôt, porter des chaussures adhérentes et vérifier les éventuelles fermetures du sentier avant le départ."
+  },
+  {
+    "id": "cap-jaune",
+    "nom": "Cap Jaune",
+    "categorie": "Point de vue",
+    "micro_region": "Sud",
+    "commune": "Saint-Joseph",
+    "description": "Promontoire rocheux remarquable par ses falaises jaunes et ses vues ouvertes sur la côte sauvage. Le site offre un panorama très différent des falaises basaltiques noires voisines.",
+    "coordonnees": {
+      "lat": -21.398762,
+      "lng": 55.636708
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "3h",
+    "payant": false,
+    "conseil_local": "Éviter les bords de falaise par vent fort et partir avec suffisamment d'eau, car le parcours est exposé."
+  },
+  {
+    "id": "cascade-grand-galet",
+    "nom": "Cascade de Grand Galet",
+    "categorie": "Bassin",
+    "micro_region": "Sud",
+    "commune": "Saint-Joseph",
+    "description": "Chute emblématique de la rivière Langevin, entourée de falaises verdoyantes et de nombreuses vasques. C'est l'un des paysages aquatiques les plus connus du Sud Sauvage.",
+    "coordonnees": {
+      "lat": -21.282583,
+      "lng": 55.646871
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Observer la cascade depuis les zones autorisées et ne pas se baigner sous la chute après des pluies."
+  },
+  {
+    "id": "riviere-langevin-ti-cap",
+    "nom": "Bassins de la rivière Langevin",
+    "categorie": "Bassin",
+    "micro_region": "Sud",
+    "commune": "Saint-Joseph",
+    "description": "Succession de bassins, toboggans naturels et cascades dans une vallée tropicale spectaculaire. Le secteur se prête à la randonnée aquatique et au canyoning encadré.",
+    "coordonnees": {
+      "lat": -21.286218,
+      "lng": 55.651263
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "La baignade sauvage est à pratiquer avec une grande prudence ; privilégier un guide pour les passages techniques."
+  },
+  {
+    "id": "canyoning-langevin",
+    "nom": "Canyoning dans la rivière Langevin",
+    "categorie": "Loisir",
+    "micro_region": "Sud",
+    "commune": "Saint-Joseph",
+    "description": "Parcours aquatique entre sauts, glissades et vasques dans l'une des rivières les plus célèbres de l'île. Plusieurs formats encadrés conviennent aux débutants comme aux pratiquants confirmés.",
+    "coordonnees": {
+      "lat": -21.286754,
+      "lng": 55.649018
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "Demi-journée",
+    "payant": true,
+    "conseil_local": "Réserver avec un professionnel diplômé et annuler la sortie en cas de fortes pluies ou de débit élevé."
+  },
+  {
+    "id": "pointe-de-la-table",
+    "nom": "Pointe de la Table",
+    "categorie": "Point de vue",
+    "micro_region": "Sud",
+    "commune": "Saint-Philippe",
+    "description": "Ancienne coulée de lave arrivée à l'océan et formant une avancée minérale spectaculaire. Les panneaux et les reliefs racontent la progression des éruptions du Grand Brûlé.",
+    "coordonnees": {
+      "lat": -21.290385,
+      "lng": 55.791468
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h",
+    "payant": false,
+    "conseil_local": "Rester sur les zones sécurisées et ne pas s'approcher des tunnels ou fissures non balisés."
+  },
+  {
+    "id": "cap-mechant",
+    "nom": "Cap Méchant",
+    "categorie": "Point de vue",
+    "micro_region": "Sud",
+    "commune": "Saint-Philippe",
+    "description": "Promontoire volcanique battu par les vagues, reconnaissable à ses falaises noires et à son piton rocheux couvert de végétation. Le site incarne toute la puissance de la côte sauvage.",
+    "coordonnees": {
+      "lat": -21.358934,
+      "lng": 55.720918
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h",
+    "payant": false,
+    "conseil_local": "Ne jamais s'approcher du bord lors des fortes houles et rester derrière les espaces aménagés."
+  },
+  {
+    "id": "puits-des-anglais",
+    "nom": "Puits des Anglais",
+    "categorie": "Bassin",
+    "micro_region": "Sud",
+    "commune": "Saint-Philippe",
+    "description": "Ancienne piscine maritime creusée dans la lave près du littoral de Saint-Philippe. Le bassin offre un décor volcanique saisissant, mais la baignade dépend fortement de l'état de la mer.",
+    "coordonnees": {
+      "lat": -21.367692,
+      "lng": 55.712376
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Se baigner uniquement si le bassin est calme et vérifier les consignes locales avant de descendre sur les rochers."
+  },
+  {
+    "id": "puits-des-arabes",
+    "nom": "Puits des Arabes",
+    "categorie": "Point de vue",
+    "micro_region": "Sud",
+    "commune": "Saint-Philippe",
+    "description": "Site littoral volcanique où la végétation reprend progressivement ses droits sur les anciennes coulées. Les points de vue donnent sur une côte noire, sauvage et très peu urbanisée.",
+    "coordonnees": {
+      "lat": -21.374398,
+      "lng": 55.706851
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h",
+    "payant": false,
+    "conseil_local": "Porter des chaussures fermées et éviter les zones rocheuses humides, particulièrement glissantes."
+  },
+  {
+    "id": "sentier-littoral-puits-anglais",
+    "nom": "Sentier littoral du Puits des Anglais",
+    "categorie": "Rando",
+    "micro_region": "Sud",
+    "commune": "Saint-Philippe",
+    "description": "Balade sur les coulées de lave du littoral de Saint-Philippe, entre vacoas, fougères et panoramas marins. Le parcours permet de ressentir l'évolution de la végétation sur les terrains volcaniques.",
+    "coordonnees": {
+      "lat": -21.369534,
+      "lng": 55.711945
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "La lave est irrégulière et coupante : chaussures de randonnée indispensables et progression prudente."
+  },
+  {
+    "id": "jardin-des-parfums-et-des-epices",
+    "nom": "Jardin des Parfums et des Épices",
+    "categorie": "Culture",
+    "micro_region": "Sud",
+    "commune": "Saint-Philippe",
+    "description": "Jardin botanique installé dans une forêt de bois de couleurs, présentant vanille, cannelle, vétiver, curcuma et plantes endémiques. Les visites guidées révèlent les savoir-faire agricoles et médicinaux du Sud Sauvage.",
+    "coordonnees": {
+      "lat": -21.335814,
+      "lng": 55.761677
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": true,
+    "conseil_local": "Choisir une visite guidée pour découvrir les odeurs et les usages traditionnels des plantes."
+  },
+  {
+    "id": "foret-de-mare-longue",
+    "nom": "Forêt de Mare-Longue",
+    "categorie": "Rando",
+    "micro_region": "Hauts",
+    "commune": "Saint-Philippe",
+    "description": "Forêt primaire humide abritant une remarquable diversité de bois de couleurs et de plantes endémiques. Le sentier botanique offre une immersion accessible dans l'écosystème du Sud Sauvage.",
+    "coordonnees": {
+      "lat": -21.343751,
+      "lng": 55.769242
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Prévoir une veste légère et des chaussures antidérapantes, car le sous-bois reste humide toute l'année."
+  },
+  {
+    "id": "tunnel-de-lave-grand-brule",
+    "nom": "Tunnel de lave du Grand Brûlé",
+    "categorie": "Loisir",
+    "micro_region": "Sud",
+    "commune": "Sainte-Philippe",
+    "description": "Exploration de galeries formées par d'anciennes coulées de lave sur le littoral volcanique. Les concrétions et textures minérales permettent de comprendre le cheminement de la lave sous sa croûte refroidie.",
+    "coordonnees": {
+      "lat": -21.261482,
+      "lng": 55.798634
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "2h30",
+    "payant": true,
+    "conseil_local": "Visiter uniquement avec un guide spécialisé, équipé d'une lampe frontale, d'un casque et de chaussures fermées."
+  },
+  {
+    "id": "route-des-laves",
+    "nom": "Route des Laves",
+    "categorie": "Point de vue",
+    "micro_region": "Sud",
+    "commune": "Saint-Philippe",
+    "description": "Portion spectaculaire de la RN2 traversant les coulées volcaniques du Grand Brûlé jusqu'au pied du volcan. Elle révèle un paysage unique où la forêt tropicale recolonise les anciennes éruptions.",
+    "coordonnees": {
+      "lat": -21.277512,
+      "lng": 55.790156
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "Consulter les fermetures de la RN2 avant le départ et s'arrêter uniquement sur les emplacements autorisés."
+  },
+  {
+    "id": "pointe-du-tremblet",
+    "nom": "Pointe du Tremblet",
+    "categorie": "Point de vue",
+    "micro_region": "Sud",
+    "commune": "Saint-Philippe",
+    "description": "Cap volcanique avancé dans l'océan au cœur du Grand Brûlé. Les falaises, les coulées récentes et la forêt littorale composent un décor particulièrement brut.",
+    "coordonnees": {
+      "lat": -21.230778,
+      "lng": 55.789384
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "3h",
+    "payant": false,
+    "conseil_local": "Vérifier l'ouverture du sentier et ne pas quitter le tracé, car les coulées cachent des crevasses et tunnels."
+  },
+  {
+    "id": "anse-des-cascades",
+    "nom": "Anse des Cascades",
+    "categorie": "Sunset",
+    "micro_region": "Sud",
+    "commune": "Sainte-Rose",
+    "description": "Anse verdoyante bordée de cascades, de vacoas et de filaos, avec une petite marine traditionnelle. Le site est parfait pour une pause, une balade littorale ou un pique-nique face aux reliefs volcaniques.",
+    "coordonnees": {
+      "lat": -21.196738,
+      "lng": 55.782461
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Arriver tôt le week-end et rester à distance des vagues sur les secteurs rocheux."
+  },
+  {
+    "id": "port-de-peche-de-saint-philippe",
+    "nom": "Port de pêche de Saint-Philippe",
+    "categorie": "Culture",
+    "micro_region": "Sud",
+    "commune": "Saint-Philippe",
+    "description": "Petit port traditionnel ouvert sur une côte volcanique où l'activité de pêche reste très présente. C'est un lieu intéressant pour observer les barques, les retours de pêche et l'identité maritime du Sud Sauvage.",
+    "coordonnees": {
+      "lat": -21.360481,
+      "lng": 55.704686
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "45 min",
+    "payant": false,
+    "conseil_local": "Demander avant de photographier les pêcheurs et rester en retrait des zones de manœuvre."
+  },
+  {
+    "id": "maison-du-curcuma",
+    "nom": "Maison du Curcuma",
+    "categorie": "Culture",
+    "micro_region": "Hauts",
+    "commune": "Saint-Joseph",
+    "description": "Lieu de découverte consacré au curcuma cultivé dans les Hauts de Saint-Joseph et aux épices réunionnaises. La visite met en valeur les pratiques agricoles et les usages culinaires locaux.",
+    "coordonnees": {
+      "lat": -21.280871,
+      "lng": 55.628134
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "1h",
+    "payant": true,
+    "conseil_local": "Téléphoner avant de venir afin de confirmer les créneaux de visite et profiter des produits de la boutique."
+  },
+  {
+    "id": "labyrinthe-en-champ-the",
+    "nom": "Labyrinthe En-Champ-Thé",
+    "categorie": "Loisir",
+    "micro_region": "Hauts",
+    "commune": "Saint-Joseph",
+    "description": "Parcours ludique au milieu d'une plantation de thé des Hauts de Grand Coude. L'activité associe découverte agricole, énigmes et paysages de montagne du Sud Sauvage.",
+    "coordonnees": {
+      "lat": -21.258366,
+      "lng": 55.607411
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h",
+    "payant": true,
+    "conseil_local": "Prévoir des chaussures fermées et réserver lorsque la météo est annoncée humide."
+  },
+  {
+    "id": "maison-de-laurina",
+    "nom": "Maison de Laurina",
+    "categorie": "Culture",
+    "micro_region": "Hauts",
+    "commune": "Saint-Joseph",
+    "description": "Exploitation dédiée au café Bourbon pointu, cultivé dans les hauteurs de Grand Coude. La visite présente les étapes de production et l'histoire d'un café considéré comme emblématique de La Réunion.",
+    "coordonnees": {
+      "lat": -21.255918,
+      "lng": 55.609855
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "1h30",
+    "payant": true,
+    "conseil_local": "Réserver avant de monter dans les Hauts et prévoir une veste, car les températures sont plus fraîches."
+  },
+  {
+    "id": "ferme-equestre-du-sud-sauvage",
+    "nom": "Balade équestre du Sud Sauvage",
+    "categorie": "Loisir",
+    "micro_region": "Sud",
+    "commune": "Saint-Philippe",
+    "description": "Balades à cheval ou en calèche entre espaces boisés, reliefs des Hauts et panoramas océaniques. L'expérience permet de découvrir des paysages moins accessibles en voiture.",
+    "coordonnees": {
+      "lat": -21.351827,
+      "lng": 55.755432
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h",
+    "payant": true,
+    "conseil_local": "Réserver à l'avance et porter un pantalon long ainsi que des chaussures fermées."
+  },
+  {
+    "id": "marche-forain-saint-joseph",
+    "nom": "Marché forain de Saint-Joseph",
+    "categorie": "Culture",
+    "micro_region": "Sud",
+    "commune": "Saint-Joseph",
+    "description": "Marché coloré où se rencontrent producteurs, artisans et cuisiniers autour des fruits, légumes, épices et spécialités du Sud. C'est un excellent point de départ pour goûter au terroir réunionnais.",
+    "coordonnees": {
+      "lat": -21.378112,
+      "lng": 55.619582
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Vérifier le jour de tenue du marché et venir tôt pour trouver les meilleurs produits."
+  },
+  {
+    "id": "pique-nique-langevin",
+    "nom": "Aires de pique-nique de la rivière Langevin",
+    "categorie": "Sunset",
+    "micro_region": "Sud",
+    "commune": "Saint-Joseph",
+    "description": "Espaces ombragés installés le long de la rivière, dans un décor de végétation tropicale et de falaises. Le site convient à une pause fraîche après la découverte des cascades.",
+    "coordonnees": {
+      "lat": -21.289731,
+      "lng": 55.646289
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Ne pas installer de pique-nique au bord immédiat de l'eau et quitter les lieux si le niveau de la rivière monte."
+  },
+  {
+    "id": "sunset-cap-mechant",
+    "nom": "Coucher de soleil au Cap Méchant",
+    "categorie": "Sunset",
+    "micro_region": "Sud",
+    "commune": "Saint-Philippe",
+    "description": "Les dernières lumières se reflètent sur les falaises noires et les embruns du Cap Méchant. Le panorama est particulièrement saisissant lorsque le ciel dégagé embrase l'horizon marin.",
+    "coordonnees": {
+      "lat": -21.358934,
+      "lng": 55.720918
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Arriver avant la tombée de la nuit et rester impérativement en retrait des falaises et des vagues."
+  },
+  {
+    "id": "barachois-saint-denis",
+    "nom": "Le Barachois",
+    "categorie": "Sunset",
+    "micro_region": "Nord",
+    "commune": "Saint-Denis",
+    "description": "Promenade historique en bord de mer ponctuée de canons, de palmiers et de bâtiments anciens. C'est un lieu apprécié pour flâner et admirer les lumières du soir.",
+    "coordonnees": {
+      "lat": -20.878921,
+      "lng": 55.448842
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h",
+    "payant": false,
+    "conseil_local": "Y aller en fin de journée pour profiter de la fraîcheur et de l'animation du front de mer."
+  },
+  {
+    "id": "rue-de-paris-saint-denis",
+    "nom": "Rue de Paris et ses cases créoles",
+    "categorie": "Culture",
+    "micro_region": "Nord",
+    "commune": "Saint-Denis",
+    "description": "Axe patrimonial bordé de villas créoles, jardins et bâtiments historiques. La promenade révèle l'architecture et l'histoire urbaine du chef-lieu.",
+    "coordonnees": {
+      "lat": -20.882516,
+      "lng": 55.450948
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Privilégier une visite le matin ou en fin d'après-midi pour éviter la chaleur."
+  },
+  {
+    "id": "jardin-de-letat",
+    "nom": "Jardin de l'État",
+    "categorie": "Culture",
+    "micro_region": "Nord",
+    "commune": "Saint-Denis",
+    "description": "Jardin botanique historique au cœur de Saint-Denis, abritant de nombreuses essences tropicales. Il accueille également le Muséum d'histoire naturelle.",
+    "coordonnees": {
+      "lat": -20.887874,
+      "lng": 55.450016
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Combiner la balade avec la visite du Muséum et prévoir une pause à l'ombre."
+  },
+  {
+    "id": "museum-histoire-naturelle",
+    "nom": "Muséum d'histoire naturelle",
+    "categorie": "Culture",
+    "micro_region": "Nord",
+    "commune": "Saint-Denis",
+    "description": "Installé dans un bâtiment historique du Jardin de l'État, le musée présente la faune de La Réunion et de l'océan Indien. C'est une visite intéressante par temps pluvieux.",
+    "coordonnees": {
+      "lat": -20.887782,
+      "lng": 55.449753
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Vérifier les horaires d'ouverture avant de venir."
+  },
+  {
+    "id": "musee-leon-dierx",
+    "nom": "Musée Léon-Dierx",
+    "categorie": "Culture",
+    "micro_region": "Nord",
+    "commune": "Saint-Denis",
+    "description": "Musée des beaux-arts présentant des œuvres liées à La Réunion et à l'histoire de l'art. Il se trouve dans le centre historique, près de la rue de Paris.",
+    "coordonnees": {
+      "lat": -20.882683,
+      "lng": 55.450421
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "1h",
+    "payant": true,
+    "conseil_local": "Contrôler les jours d'ouverture, souvent variables selon les périodes."
+  },
+  {
+    "id": "grand-marche-saint-denis",
+    "nom": "Grand Marché de Saint-Denis",
+    "categorie": "Culture",
+    "micro_region": "Nord",
+    "commune": "Saint-Denis",
+    "description": "Marché couvert dédié à l'artisanat réunionnais et de l'océan Indien. On y trouve textiles, objets en bois, paniers tressés et souvenirs locaux.",
+    "coordonnees": {
+      "lat": -20.881514,
+      "lng": 55.448373
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "1h",
+    "payant": false,
+    "conseil_local": "Comparer les stands et prévoir de la monnaie pour les petits achats."
+  },
+  {
+    "id": "petit-marche-saint-denis",
+    "nom": "Petit Marché de Saint-Denis",
+    "categorie": "Culture",
+    "micro_region": "Nord",
+    "commune": "Saint-Denis",
+    "description": "Marché alimentaire animé où se mêlent fruits tropicaux, légumes, épices, piments et produits frais. Il offre une immersion directe dans les habitudes culinaires réunionnaises.",
+    "coordonnees": {
+      "lat": -20.886638,
+      "lng": 55.451711
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "1h",
+    "payant": false,
+    "conseil_local": "Venir tôt pour profiter du meilleur choix et éviter l'affluence."
+  },
+  {
+    "id": "cathedrale-saint-denis",
+    "nom": "Cathédrale de Saint-Denis",
+    "categorie": "Culture",
+    "micro_region": "Nord",
+    "commune": "Saint-Denis",
+    "description": "Édifice religieux majeur du centre-ville, reconnaissable à sa façade blanche et à ses proportions élégantes. Elle témoigne de l'histoire religieuse et architecturale du chef-lieu.",
+    "coordonnees": {
+      "lat": -20.881996,
+      "lng": 55.449404
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "30 min",
+    "payant": false,
+    "conseil_local": "Respecter les horaires de culte et la tranquillité des lieux."
+  },
+  {
+    "id": "pagode-guandi",
+    "nom": "Pagode Guan Di",
+    "categorie": "Culture",
+    "micro_region": "Nord",
+    "commune": "Saint-Denis",
+    "description": "Temple chinois consacré à Guan Di, marqué par ses couleurs vives et son atmosphère paisible. Il illustre la diversité culturelle et religieuse de La Réunion.",
+    "coordonnees": {
+      "lat": -20.881417,
+      "lng": 55.452202
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "30 min",
+    "payant": false,
+    "conseil_local": "Se renseigner sur les règles de visite et éviter de photographier les cérémonies sans autorisation."
+  },
+  {
+    "id": "cimetiere-marin-saint-denis",
+    "nom": "Cimetière marin de Saint-Denis",
+    "categorie": "Culture",
+    "micro_region": "Nord",
+    "commune": "Saint-Denis",
+    "description": "Cimetière historique installé face à l'océan, où reposent plusieurs personnalités liées à l'histoire de l'île. Ses allées offrent une promenade calme entre tombes anciennes et végétation tropicale.",
+    "coordonnees": {
+      "lat": -20.887572,
+      "lng": 55.445918
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "45 min",
+    "payant": false,
+    "conseil_local": "Adopter une attitude respectueuse et éviter les heures de forte chaleur."
+  },
+  {
+    "id": "sentier-littoral-saint-denis-sainte-suzanne",
+    "nom": "Sentier littoral Nord",
+    "categorie": "Rando",
+    "micro_region": "Nord",
+    "commune": "Saint-Denis",
+    "description": "Itinéraire côtier reliant plusieurs secteurs du nord entre falaises, ravines et vues sur l'océan. Il peut être parcouru par tronçons selon le niveau et le temps disponible.",
+    "coordonnees": {
+      "lat": -20.875366,
+      "lng": 55.465842
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "Vérifier l'état des portions ouvertes et éviter les secteurs exposés en cas de forte houle."
+  },
+  {
+    "id": "cascade-maniquet",
+    "nom": "Cascade Maniquet",
+    "categorie": "Bassin",
+    "micro_region": "Hauts",
+    "commune": "Saint-Denis",
+    "description": "Cascade forestière située dans les hauteurs de Saint-Denis, au cœur d'une végétation humide et dense. La balade offre une parenthèse fraîche à proximité du chef-lieu.",
+    "coordonnees": {
+      "lat": -20.902742,
+      "lng": 55.443177
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "2h30",
+    "payant": false,
+    "conseil_local": "Porter des chaussures antidérapantes et ne pas s'approcher des vasques après de fortes pluies."
+  },
+  {
+    "id": "aire-pique-nique-du-brule",
+    "nom": "Aire de pique-nique du Brûlé",
+    "categorie": "Sunset",
+    "micro_region": "Hauts",
+    "commune": "Saint-Denis",
+    "description": "Espace ombragé des Hauts de Saint-Denis, apprécié pour ses tables et ses départs de balades forestières. L'air y est plus frais que sur le littoral.",
+    "coordonnees": {
+      "lat": -20.918815,
+      "lng": 55.446358
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Prévoir une veste légère et arriver tôt les week-ends."
+  },
+  {
+    "id": "parc-du-colorado",
+    "nom": "Parc du Colorado",
+    "categorie": "Point de vue",
+    "micro_region": "Hauts",
+    "commune": "Saint-Denis",
+    "description": "Parc de montagne offrant un vaste panorama sur Saint-Denis, l'océan et les pentes du nord. Le site dispose d'espaces de détente et de sentiers faciles.",
+    "coordonnees": {
+      "lat": -20.928264,
+      "lng": 55.431595
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Y aller en fin d'après-midi pour une belle lumière sur la ville."
+  },
+  {
+    "id": "sentier-du-colorado",
+    "nom": "Sentier du Colorado",
+    "categorie": "Rando",
+    "micro_region": "Hauts",
+    "commune": "Saint-Denis",
+    "description": "Réseau de sentiers autour du Colorado, entre savane d'altitude, points de vue et zones boisées. C'est une sortie polyvalente adaptée à la marche et au trail.",
+    "coordonnees": {
+      "lat": -20.927819,
+      "lng": 55.430487
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "2h30",
+    "payant": false,
+    "conseil_local": "Prévoir de l'eau et se protéger du soleil, car certaines portions sont très ouvertes."
+  },
+  {
+    "id": "cap-bernard",
+    "nom": "Sentier du Cap Bernard",
+    "categorie": "Rando",
+    "micro_region": "Nord",
+    "commune": "Saint-Denis",
+    "description": "Sentier dominant la côte nord entre falaises, végétation sèche et panoramas marins. Il offre une lecture spectaculaire du relief côtier de Saint-Denis.",
+    "coordonnees": {
+      "lat": -20.892847,
+      "lng": 55.430856
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Éviter les heures chaudes et rester à distance des falaises friables."
+  },
+  {
+    "id": "roche-ecrite",
+    "nom": "Roche Écrite",
+    "categorie": "Point de vue",
+    "micro_region": "Hauts",
+    "commune": "Saint-Denis",
+    "description": "Sommet emblématique dominant le cirque de Mafate et les reliefs du nord. Par temps dégagé, le panorama compte parmi les plus impressionnants de l'île.",
+    "coordonnees": {
+      "lat": -20.994362,
+      "lng": 55.447326
+    },
+    "difficulte": "Difficile",
+    "duree_estimee": "Journée",
+    "payant": false,
+    "conseil_local": "Partir très tôt, vérifier la météo et prévoir une vraie randonnée de montagne."
+  },
+  {
+    "id": "vierge-noire-sainte-marie",
+    "nom": "Vierge Noire de la Rivière des Pluies",
+    "categorie": "Culture",
+    "micro_region": "Nord",
+    "commune": "Sainte-Marie",
+    "description": "Lieu de pèlerinage installé dans un environnement verdoyant au bord de la Rivière des Pluies. Le site est associé à une légende populaire et à une forte dévotion locale.",
+    "coordonnees": {
+      "lat": -20.901876,
+      "lng": 55.511022
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "45 min",
+    "payant": false,
+    "conseil_local": "Privilégier une visite hors des périodes de célébration pour découvrir le site calmement."
+  },
+  {
+    "id": "bois-madame",
+    "nom": "Parc de Bois Madame",
+    "categorie": "Sunset",
+    "micro_region": "Nord",
+    "commune": "Sainte-Marie",
+    "description": "Grand espace vert en bord de mer équipé pour les promenades, le sport et les pique-niques. Il constitue un lieu de détente apprécié des familles du nord.",
+    "coordonnees": {
+      "lat": -20.893731,
+      "lng": 55.510246
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Arriver tôt les dimanches et profiter de la fin de journée pour éviter la chaleur."
+  },
+  {
+    "id": "bassin-boeuf-sainte-marie",
+    "nom": "Bassin Bœuf",
+    "categorie": "Loisir",
+    "micro_region": "Hauts",
+    "commune": "Sainte-Marie",
+    "description": "Site naturel encaissé de la vallée de la Rivière Sainte-Suzanne, connu pour le canyoning et ses reliefs humides. L'accès et la pratique nécessitent une bonne connaissance du terrain.",
+    "coordonnees": {
+      "lat": -20.938521,
+      "lng": 55.559811
+    },
+    "difficulte": "Difficile",
+    "duree_estimee": "Demi-journée",
+    "payant": true,
+    "conseil_local": "Pratiquer uniquement avec un professionnel et renoncer après de fortes pluies."
+  },
+  {
+    "id": "domaine-grand-hazier",
+    "nom": "Domaine du Grand Hazier et Vanilleraie",
+    "categorie": "Culture",
+    "micro_region": "Nord",
+    "commune": "Sainte-Suzanne",
+    "description": "Ancienne propriété créole entourée de jardins et de plantations, consacrée notamment à la vanille Bourbon. Les visites permettent de découvrir les méthodes de pollinisation et de préparation de la vanille.",
+    "coordonnees": {
+      "lat": -20.900649,
+      "lng": 55.603912
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": true,
+    "conseil_local": "Réserver une visite guidée pour comprendre les étapes de transformation de la vanille."
+  },
+  {
+    "id": "cascade-niagara-sainte-suzanne",
+    "nom": "Cascade Niagara",
+    "categorie": "Bassin",
+    "micro_region": "Nord",
+    "commune": "Sainte-Suzanne",
+    "description": "Large chute d'eau située au milieu des champs et des jardins de Sainte-Suzanne. Son accès facile en fait un arrêt incontournable pour découvrir la nature tropicale du nord-est.",
+    "coordonnees": {
+      "lat": -20.907945,
+      "lng": 55.611901
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h",
+    "payant": false,
+    "conseil_local": "Éviter la baignade après les pluies et respecter les cultures et propriétés voisines."
+  },
+  {
+    "id": "phare-de-bel-air",
+    "nom": "Phare de Bel-Air",
+    "categorie": "Culture",
+    "micro_region": "Nord",
+    "commune": "Sainte-Suzanne",
+    "description": "Ancien phare installé près du littoral et associé à des jardins et espaces d'exposition. Le site raconte l'histoire maritime de Sainte-Suzanne.",
+    "coordonnees": {
+      "lat": -20.898986,
+      "lng": 55.606441
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h",
+    "payant": false,
+    "conseil_local": "Vérifier les créneaux d'ouverture des expositions et combiner avec le sentier littoral."
+  },
+  {
+    "id": "sentier-littoral-sainte-suzanne",
+    "nom": "Sentier littoral de Sainte-Suzanne",
+    "categorie": "Rando",
+    "micro_region": "Nord",
+    "commune": "Sainte-Suzanne",
+    "description": "Balade entre phare, falaises, végétation littorale et vues sur l'océan Indien. Le parcours permet de découvrir un secteur côtier moins urbanisé.",
+    "coordonnees": {
+      "lat": -20.898114,
+      "lng": 55.608427
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Porter des chaussures fermées et éviter les bords de falaise par houle ou vent fort."
+  },
+  {
+    "id": "bocage-sainte-suzanne",
+    "nom": "Parc du Bocage",
+    "categorie": "Sunset",
+    "micro_region": "Nord",
+    "commune": "Sainte-Suzanne",
+    "description": "Parc de loisirs et de promenade installé près de l'embouchure de la rivière Sainte-Suzanne. Il offre des espaces pour se détendre, pique-niquer et observer le littoral.",
+    "coordonnees": {
+      "lat": -20.899728,
+      "lng": 55.608865
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Privilégier la fin d'après-midi et surveiller les enfants près des zones d'eau."
+  },
+  {
+    "id": "marche-forain-sainte-suzanne",
+    "nom": "Marché forain de Sainte-Suzanne",
+    "categorie": "Culture",
+    "micro_region": "Nord",
+    "commune": "Sainte-Suzanne",
+    "description": "Marché local consacré aux fruits, légumes, épices, produits artisanaux et spécialités créoles. Il constitue une bonne porte d'entrée vers les saveurs du nord-est.",
+    "coordonnees": {
+      "lat": -20.904826,
+      "lng": 55.608112
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Vérifier le jour de tenue et venir tôt pour les produits frais."
+  },
+  {
+    "id": "sentier-dioré",
+    "nom": "Point de vue de Dioré",
+    "categorie": "Point de vue",
+    "micro_region": "Hauts",
+    "commune": "Saint-André",
+    "description": "Belvédère des hauteurs de Saint-André offrant une vue plongeante sur la vallée de la Rivière du Mât et les pentes de Salazie. Le site permet d'apprécier les paysages agricoles et montagneux de l'est-nord.",
+    "coordonnees": {
+      "lat": -20.956132,
+      "lng": 55.646274
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Y aller le matin, avant l'arrivée fréquente des nuages sur les reliefs."
+  },
+  {
+    "id": "temple-du-colosse",
+    "nom": "Temple du Colosse",
+    "categorie": "Culture",
+    "micro_region": "Nord",
+    "commune": "Saint-André",
+    "description": "Temple hindou majeur de Saint-André, remarquable par ses couleurs, ses sculptures et son importance culturelle. Il témoigne de la diversité religieuse et de l'histoire des communautés de l'île.",
+    "coordonnees": {
+      "lat": -20.946237,
+      "lng": 55.654186
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "45 min",
+    "payant": false,
+    "conseil_local": "Se renseigner sur les règles d'accès et ne pas photographier les cérémonies sans permission."
+  },
+  {
+    "id": "parc-du-colosse",
+    "nom": "Parc du Colosse",
+    "categorie": "Sunset",
+    "micro_region": "Nord",
+    "commune": "Saint-André",
+    "description": "Parc littoral avec espaces verts, promenade et vues sur l'océan. Il convient aux sorties familiales et aux pauses au calme en fin de journée.",
+    "coordonnees": {
+      "lat": -20.947982,
+      "lng": 55.655894
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Éviter les secteurs rocheux au bord de l'eau lorsque la mer est agitée."
+  },
+  {
+    "id": "canyoning-riviere-sainte-suzanne",
+    "nom": "Canyoning de la rivière Sainte-Suzanne",
+    "categorie": "Loisir",
+    "micro_region": "Nord",
+    "commune": "Sainte-Suzanne",
+    "description": "Parcours aquatique entre cascades, sauts et bassins dans une vallée verdoyante. Des formules encadrées existent pour les débutants comme pour les pratiquants confirmés.",
+    "coordonnees": {
+      "lat": -20.934772,
+      "lng": 55.571385
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "Demi-journée",
+    "payant": true,
+    "conseil_local": "Réserver avec un guide diplômé et reporter la sortie en cas de fortes pluies."
+  },
+  {
+    "id": "belvedere-maido-mafate",
+    "nom": "Belvédère du Maïdo",
+    "categorie": "Point de vue",
+    "micro_region": "Cirques",
+    "commune": "Saint-Paul",
+    "description": "Panorama emblématique plongeant sur le cirque de Mafate et ses îlets isolés. Par temps clair, la vue s'étend jusqu'à l'océan.",
+    "coordonnees": {
+      "lat": -21.071245,
+      "lng": 55.383721
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h",
+    "payant": false,
+    "conseil_local": "Arriver avant 8h pour maximiser les chances d'avoir une vue dégagée."
+  },
+  {
+    "id": "randonnee-maido-grand-benare",
+    "nom": "Sentier du Grand Bénare depuis le Maïdo",
+    "categorie": "Rando",
+    "micro_region": "Cirques",
+    "commune": "Saint-Paul",
+    "description": "Longue randonnée de crête offrant des vues sur Mafate, Cilaos et les hauts de l'île. Le parcours traverse des paysages d'altitude très ouverts.",
+    "coordonnees": {
+      "lat": -21.073611,
+      "lng": 55.384912
+    },
+    "difficulte": "Difficile",
+    "duree_estimee": "Journée",
+    "payant": false,
+    "conseil_local": "Partir très tôt et prévoir coupe-vent, eau et protection solaire."
+  },
+  {
+    "id": "col-des-boeufs",
+    "nom": "Col des Bœufs",
+    "categorie": "Point de vue",
+    "micro_region": "Cirques",
+    "commune": "Salazie",
+    "description": "Porte d'entrée majeure vers Mafate depuis Salazie. Le col dévoile un panorama spectaculaire sur les remparts et les îlets du cirque.",
+    "coordonnees": {
+      "lat": -21.092681,
+      "lng": 55.476544
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Prévoir des chaussures adaptées et vérifier les conditions du sentier avant de partir."
+  },
+  {
+    "id": "ilet-la-nouvelle",
+    "nom": "Ilet de La Nouvelle",
+    "categorie": "Rando",
+    "micro_region": "Cirques",
+    "commune": "La Possession",
+    "description": "L'un des îlets les plus connus de Mafate, accessible notamment par le col des Bœufs. Il combine paysages de montagne, cases isolées et ambiance de village.",
+    "coordonnees": {
+      "lat": -21.071762,
+      "lng": 55.432201
+    },
+    "difficulte": "Difficile",
+    "duree_estimee": "Journée",
+    "payant": false,
+    "conseil_local": "Une nuit sur place permet de profiter pleinement du calme du cirque."
+  },
+  {
+    "id": "ilet-marla",
+    "nom": "Ilet de Marla",
+    "categorie": "Rando",
+    "micro_region": "Cirques",
+    "commune": "Saint-Paul",
+    "description": "Petit village de Mafate dominé par les Trois Salazes et entouré de reliefs impressionnants. Le site est accessible par plusieurs itinéraires de montagne.",
+    "coordonnees": {
+      "lat": -21.126548,
+      "lng": 55.423812
+    },
+    "difficulte": "Difficile",
+    "duree_estimee": "Journée",
+    "payant": false,
+    "conseil_local": "Réserver son gîte à l'avance et emporter suffisamment d'eau."
+  },
+  {
+    "id": "ilet-roche-plate",
+    "nom": "Ilet de Roche Plate",
+    "categorie": "Rando",
+    "micro_region": "Cirques",
+    "commune": "Saint-Paul",
+    "description": "Hameau suspendu au-dessus de Mafate, remarquable par ses panoramas et son isolement. Le chemin d'accès traverse des reliefs secs et escarpés.",
+    "coordonnees": {
+      "lat": -21.045963,
+      "lng": 55.393612
+    },
+    "difficulte": "Difficile",
+    "duree_estimee": "Journée",
+    "payant": false,
+    "conseil_local": "Éviter les fortes chaleurs et ne pas sous-estimer les dénivelés."
+  },
+  {
+    "id": "ilet-aurere",
+    "nom": "Ilet d'Aurère",
+    "categorie": "Rando",
+    "micro_region": "Cirques",
+    "commune": "La Possession",
+    "description": "Îlet paisible de Mafate entouré de remparts et de végétation sèche. Il offre une atmosphère authentique et de beaux points de vue sur les ravines.",
+    "coordonnees": {
+      "lat": -21.013773,
+      "lng": 55.414963
+    },
+    "difficulte": "Difficile",
+    "duree_estimee": "Journée",
+    "payant": false,
+    "conseil_local": "Prévoir une nuit en gîte pour éviter un aller-retour trop exigeant."
+  },
+  {
+    "id": "sentier-scout-mafate",
+    "nom": "Sentier Scout",
+    "categorie": "Rando",
+    "micro_region": "Cirques",
+    "commune": "La Possession",
+    "description": "Itinéraire spectaculaire de Mafate entre arêtes, ravines et vues plongeantes. Le sentier est réputé pour son ambiance aérienne.",
+    "coordonnees": {
+      "lat": -21.028684,
+      "lng": 55.425018
+    },
+    "difficulte": "Difficile",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "À éviter par pluie, vent fort ou vertige important."
+  },
+  {
+    "id": "roche-merveilleuse-cilaos",
+    "nom": "Roche Merveilleuse",
+    "categorie": "Point de vue",
+    "micro_region": "Cirques",
+    "commune": "Cilaos",
+    "description": "Belvédère facile d'accès offrant une vue remarquable sur le village de Cilaos et les remparts environnants. Le site est aménagé pour une pause contemplative.",
+    "coordonnees": {
+      "lat": -21.134714,
+      "lng": 55.467124
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h",
+    "payant": false,
+    "conseil_local": "La lumière est souvent meilleure en matinée."
+  },
+  {
+    "id": "la-chapelle-cilaos",
+    "nom": "Randonnée de La Chapelle",
+    "categorie": "Rando",
+    "micro_region": "Cirques",
+    "commune": "Cilaos",
+    "description": "Sentier menant à une immense cavité basaltique formée par l'érosion. Le parcours traverse la rivière et révèle un décor minéral spectaculaire.",
+    "coordonnees": {
+      "lat": -21.147692,
+      "lng": 55.453741
+    },
+    "difficulte": "Difficile",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "Chaussures d'eau et vigilance indispensables lors de la traversée de la rivière."
+  },
+  {
+    "id": "cascade-bras-rouge",
+    "nom": "Cascade de Bras Rouge",
+    "categorie": "Bassin",
+    "micro_region": "Cirques",
+    "commune": "Cilaos",
+    "description": "Cascade encaissée dans une vallée volcanique, accessible par un sentier forestier et minéral. Les bassins sont à admirer avec prudence selon le débit.",
+    "coordonnees": {
+      "lat": -21.143521,
+      "lng": 55.459873
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "3h",
+    "payant": false,
+    "conseil_local": "Ne pas s'engager dans les bassins après de fortes pluies."
+  },
+  {
+    "id": "fleur-jaune-canyoning",
+    "nom": "Canyon de Fleur Jaune",
+    "categorie": "Loisir",
+    "micro_region": "Cirques",
+    "commune": "Cilaos",
+    "description": "Canyon emblématique de Cilaos avec rappels, vasques et passages encaissés. L'activité offre une découverte sportive des reliefs du cirque.",
+    "coordonnees": {
+      "lat": -21.145298,
+      "lng": 55.480638
+    },
+    "difficulte": "Difficile",
+    "duree_estimee": "Journée",
+    "payant": true,
+    "conseil_local": "Pratiquer exclusivement avec un guide diplômé et selon la météo."
+  },
+  {
+    "id": "trois-salazes",
+    "nom": "Les Trois Salazes",
+    "categorie": "Point de vue",
+    "micro_region": "Cirques",
+    "commune": "Cilaos",
+    "description": "Aiguilles rocheuses emblématiques séparant Cilaos et Mafate. Leur ascension est réservée aux pratiquants expérimentés et offre des vues exceptionnelles.",
+    "coordonnees": {
+      "lat": -21.128931,
+      "lng": 55.426472
+    },
+    "difficulte": "Difficile",
+    "duree_estimee": "Journée",
+    "payant": true,
+    "conseil_local": "Faire appel à un professionnel pour l'escalade et l'alpinisme."
+  },
+  {
+    "id": "piton-des-neiges-cilaos",
+    "nom": "Piton des Neiges depuis Cilaos",
+    "categorie": "Rando",
+    "micro_region": "Cirques",
+    "commune": "Cilaos",
+    "description": "Ascension du plus haut sommet de La Réunion par le sentier du Bloc. Le lever du soleil depuis le sommet constitue une expérience majeure de l'île.",
+    "coordonnees": {
+      "lat": -21.099848,
+      "lng": 55.479431
+    },
+    "difficulte": "Difficile",
+    "duree_estimee": "2 jours",
+    "payant": false,
+    "conseil_local": "Réserver le refuge et prévoir une nuit très froide en altitude."
+  },
+  {
+    "id": "route-de-cilaos",
+    "nom": "Route aux 400 virages",
+    "categorie": "Loisir",
+    "micro_region": "Cirques",
+    "commune": "Cilaos",
+    "description": "Route spectaculaire reliant Saint-Louis à Cilaos à travers tunnels, ravins et panoramas vertigineux. Le trajet fait partie intégrante de la découverte du cirque.",
+    "coordonnees": {
+      "lat": -21.164813,
+      "lng": 55.468174
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Rouler lentement et vérifier les éventuelles restrictions après intempéries."
+  },
+  {
+    "id": "ville-de-cilaos",
+    "nom": "Centre-ville de Cilaos",
+    "categorie": "Culture",
+    "micro_region": "Cirques",
+    "commune": "Cilaos",
+    "description": "Village thermal entouré de montagnes, connu pour ses lentilles, son vin et ses broderies. Les ruelles et les cases créoles invitent à une promenade tranquille.",
+    "coordonnees": {
+      "lat": -21.135756,
+      "lng": 55.471428
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Profiter du marché ou des boutiques artisanales pour découvrir les productions locales."
+  },
+  {
+    "id": "thermalisme-cilaos",
+    "nom": "Thermes de Cilaos",
+    "categorie": "Loisir",
+    "micro_region": "Cirques",
+    "commune": "Cilaos",
+    "description": "Centre thermal installé dans le cirque, réputé pour ses eaux et ses soins de bien-être. C'est une alternative reposante après une randonnée.",
+    "coordonnees": {
+      "lat": -21.135042,
+      "lng": 55.465283
+    },
+    "difficulte": "N/A",
+    "duree_estimee": "2h",
+    "payant": true,
+    "conseil_local": "Réserver les soins à l'avance, surtout pendant les vacances."
+  },
+  {
+    "id": "voile-de-la-mariee-salazie",
+    "nom": "Voile de la Mariée",
+    "categorie": "Point de vue",
+    "micro_region": "Cirques",
+    "commune": "Salazie",
+    "description": "Ensemble de cascades dévalant les remparts verdoyants de Salazie. Le spectacle est particulièrement impressionnant après les pluies.",
+    "coordonnees": {
+      "lat": -21.033927,
+      "lng": 55.548384
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "45 min",
+    "payant": false,
+    "conseil_local": "S'arrêter uniquement dans les zones sécurisées le long de la route."
+  },
+  {
+    "id": "hell-bourg",
+    "nom": "Village de Hell-Bourg",
+    "categorie": "Culture",
+    "micro_region": "Cirques",
+    "commune": "Salazie",
+    "description": "Ancien village thermal classé parmi les plus beaux villages de France, célèbre pour ses cases créoles et ses jardins. Il constitue le cœur culturel et touristique de Salazie.",
+    "coordonnees": {
+      "lat": -21.062941,
+      "lng": 55.519819
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "2h",
+    "payant": false,
+    "conseil_local": "Prévoir une veste légère et visiter les cases tôt avant l'affluence."
+  },
+  {
+    "id": "villa-folio",
+    "nom": "Villa Folio",
+    "categorie": "Culture",
+    "micro_region": "Cirques",
+    "commune": "Salazie",
+    "description": "Maison créole historique entourée d'un jardin remarquable à Hell-Bourg. La visite présente l'architecture, les usages et l'art de vivre des familles créoles.",
+    "coordonnees": {
+      "lat": -21.063238,
+      "lng": 55.520487
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h",
+    "payant": true,
+    "conseil_local": "Combiner avec une promenade dans les rues historiques de Hell-Bourg."
+  },
+  {
+    "id": "foret-de-bebour-belouve",
+    "nom": "Forêt de Bélouve",
+    "categorie": "Rando",
+    "micro_region": "Cirques",
+    "commune": "Salazie",
+    "description": "Forêt humide de tamarins, fougères arborescentes et mousses dominant Salazie. Les sentiers offrent une immersion dans l'un des environnements les plus luxuriants de l'île.",
+    "coordonnees": {
+      "lat": -21.132614,
+      "lng": 55.589237
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "Prévoir des vêtements imperméables, car la forêt est souvent brumeuse et humide."
+  },
+  {
+    "id": "belvedere-trou-de-fer",
+    "nom": "Belvédère du Trou de Fer",
+    "categorie": "Point de vue",
+    "micro_region": "Cirques",
+    "commune": "Salazie",
+    "description": "Belvédère donnant sur un immense canyon couvert de végétation et alimenté par plusieurs cascades. L'accès traverse la forêt de Bélouve.",
+    "coordonnees": {
+      "lat": -21.127493,
+      "lng": 55.591876
+    },
+    "difficulte": "Moyen",
+    "duree_estimee": "4h",
+    "payant": false,
+    "conseil_local": "Partir tôt, car le site se couvre rapidement de nuages."
+  },
+  {
+    "id": "grand-ilet-salazie",
+    "nom": "Grand Îlet",
+    "categorie": "Culture",
+    "micro_region": "Cirques",
+    "commune": "Salazie",
+    "description": "Village agricole installé dans une vallée fertile, connu pour les chouchous, les cultures maraîchères et les panoramas sur les cascades. Il offre une facette plus rurale du cirque.",
+    "coordonnees": {
+      "lat": -21.054827,
+      "lng": 55.494781
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "1h30",
+    "payant": false,
+    "conseil_local": "Acheter directement auprès des producteurs lorsque les étals sont ouverts."
+  },
+  {
+    "id": "piton-dancla-salazie",
+    "nom": "Piton d'Anchaing",
+    "categorie": "Rando",
+    "micro_region": "Cirques",
+    "commune": "Salazie",
+    "description": "Sommet isolé au cœur de Salazie, associé à l'histoire des esclaves marrons. Son ascension offre une vue panoramique sur les remparts et les villages du cirque.",
+    "coordonnees": {
+      "lat": -21.037681,
+      "lng": 55.500964
+    },
+    "difficulte": "Difficile",
+    "duree_estimee": "Demi-journée",
+    "payant": false,
+    "conseil_local": "Éviter les jours humides, car certaines portions sont raides et glissantes."
+  },
+  {
+    "id": "cascade-blanche-salazie",
+    "nom": "Cascade Blanche",
+    "categorie": "Bassin",
+    "micro_region": "Cirques",
+    "commune": "Salazie",
+    "description": "Grande chute d'eau visible depuis la route de Salazie, au milieu d'un décor de falaises et de végétation tropicale. Elle constitue un arrêt photo facile d'accès.",
+    "coordonnees": {
+      "lat": -21.015861,
+      "lng": 55.552147
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "30 min",
+    "payant": false,
+    "conseil_local": "Ne pas quitter les accotements aménagés et rester prudent par forte pluie."
+  },
+  {
+    "id": "cascade-pisse-en-lair",
+    "nom": "Cascade Pisse-en-l'Air",
+    "categorie": "Point de vue",
+    "micro_region": "Cirques",
+    "commune": "Cilaos",
+    "description": "Filet d'eau spectaculaire tombant directement au bord de la route de Cilaos. Le débit varie fortement selon les pluies et les saisons.",
+    "coordonnees": {
+      "lat": -21.157884,
+      "lng": 55.465914
+    },
+    "difficulte": "Facile",
+    "duree_estimee": "20 min",
+    "payant": false,
+    "conseil_local": "Observer depuis un emplacement sûr sans stationner dans les virages."
+  }
+]

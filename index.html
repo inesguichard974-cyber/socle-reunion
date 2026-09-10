@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>DÉCOUVRIR 974 — Île Intense</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#FF0844">
+
+  <!-- Polices modernes percutantes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- Confetti JS -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Orbes lumineuses de fond pour le Glassmorphism volcanique -->
+  <div class="lava-glow glow-1"></div>
+  <div class="lava-glow glow-2"></div>
+
+  <div class="app-layout">
+    <!-- PANNEAU LATÉRAL EN VERRE DÉPOLI -->
+    <aside class="sidebar glass-panel">
+      
+      <!-- En-tête avec dégradé lave -->
+      <header class="header">
+        <div class="header-top">
+          <div>
+            <span class="badge-volcan">ÎLE INTENSE • 974</span>
+            <h1 class="brand-title">DÉCOUVRIR 974</h1>
+          </div>
+          <div class="header-actions">
+            <button id="btn-roulette" class="icon-btn" title="Sortie surprise !" onclick="tirerSortieHasard()">
+              <span>🎲</span>
+            </button>
+            <button id="btn-badges" class="icon-btn" title="Mes Trophées" onclick="ouvrirModalBadges()">
+              <span>🏆</span>
+            </button>
+            <button id="btn-saved-trips" class="icon-btn" title="Mes Roadtrips enregistrés" onclick="ouvrirModalRoadtrips()">
+              <span>🗺️</span>
+            </button>
+            <button id="theme-toggle" class="icon-btn" title="Mode Jour/Nuit">
+              <span class="theme-icon">☀️</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Jauge d'exploration liquide en fusion -->
+        <div class="progress-box glass-subpanel">
+          <div class="progress-labels">
+            <span class="progress-title" id="badge-title-level">Niveau : Débutant</span>
+            <span id="progress-text" class="progress-val">0 / 0 (0%)</span>
+          </div>
+          <div class="progress-track">
+            <div id="progress-bar" class="progress-fill"></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Onglets Vue Générale vs Priorités -->
+      <div class="tab-group">
+        <button class="tab-btn active" data-tab="all" onclick="changerOnglet('all')">
+          Tous les spots
+        </button>
+        <button class="tab-btn" data-tab="priorites" onclick="changerOnglet('priorites')">
+          🔥 Prévus bientôt <span id="badge-prio-count" class="tab-counter">0</span>
+        </button>
+      </div>
+
+      <!-- Recherche & Filtres sous forme de gélules néon -->
+      <div class="filters-container">
+        <div class="search-wrapper">
+          <input type="text" id="search-input" placeholder="Rechercher (Maïdo, volcan, lagon, rando...)" class="search-input">
+        </div>
+
+        <div class="filter-row-label">Région</div>
+        <div id="regions-chips" class="chips-scroll"></div>
+
+        <div class="filter-row-label">Activité</div>
+        <div id="categories-chips" class="chips-scroll"></div>
+      </div>
+
+      <!-- Liste dynamique des spots -->
+      <main id="spots-list" class="spots-list"></main>
+    </aside>
+
+    <!-- CARTE INTERACTIVE -->
+    <div class="map-wrapper">
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <!-- BARRE FLOTTANTE D'ITINÉRAIRE ROADTRIP -->
+  <div id="route-panel" class="route-panel glass-panel" style="display: none;">
+    <div class="route-info">
+      <span class="route-title">🚗 Mon Roadtrip du Jour</span>
+      <span id="route-stats" class="route-stats">Calcul en cours...</span>
+    </div>
+    <div class="route-actions">
+      <button class="btn-action active-trip" onclick="sauvegarderRoadtripActuel()">💾 Enregistrer</button>
+      <button class="btn-action active-prio" onclick="ouvrirDansGoogleMaps()">GPS</button>
+      <button class="btn-action" onclick="reinitialiserItineraire()" title="Effacer">✕</button>
+    </div>
+  </div>
+
+  <!-- MODAL BADGES & TROPHÉES -->
+  <div id="badges-modal" class="modal-overlay" style="display: none;" onclick="fermerModalBadges(event)">
+    <div class="modal-card glass-panel" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h2>🏆 Trophées Réunionnais</h2>
+        <button class="icon-btn" onclick="fermerModalBadges()">✕</button>
+      </div>
+      <div id="badges-grid" class="badges-grid"></div>
+    </div>
+  </div>
+
+  <!-- MODAL ROADTRIPS ENREGISTRÉS -->
+  <div id="roadtrips-modal" class="modal-overlay" style="display: none;" onclick="fermerModalRoadtrips(event)">
+    <div class="modal-card glass-panel" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h2>🗺️ Mes Itinéraires Enregistrés</h2>
+        <button class="icon-btn" onclick="fermerModalRoadtrips()">✕</button>
+      </div>
+      <div id="roadtrips-list" class="roadtrips-container"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
