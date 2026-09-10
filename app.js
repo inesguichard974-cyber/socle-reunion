@@ -522,4 +522,62 @@ function filtrerCategorie(cat) {
   genererBoutonsFiltres();
   rendreMarqueurs();
   rendreUI();
+}// ==========================================================================
+// GESTION DU TIROIR TACTILE MOBILE (BOTTOM SHEET)
+// ==========================================================================
+const sheet = document.getElementById('sidebar-sheet');
+let sheetState = 'collapsed'; // 'collapsed' | 'half' | 'expanded'
+
+function basculerTiroirMobile() {
+  if (window.innerWidth > 860) return;
+
+  if (sheetState === 'collapsed') {
+    reglerTiroir('half');
+  } else if (sheetState === 'half') {
+    reglerTiroir('expanded');
+  } else {
+    reglerTiroir('collapsed');
+  }
+}
+
+function ouvrirTiroirPleinEcran() {
+  if (window.innerWidth <= 860) {
+    reglerTiroir('expanded');
+  }
+}
+
+function reglerTiroir(nouvelEtat) {
+  sheetState = nouvelEtat;
+  sheet.classList.remove('sheet-collapsed', 'sheet-half', 'sheet-expanded');
+  sheet.classList.add(`sheet-${nouvelEtat}`);
+  
+  // Recentrer la carte proprement quand la hauteur change
+  setTimeout(() => {
+    map.invalidateSize();
+  }, 350);
+}
+
+// Support du geste de glissement (Swipe Up / Swipe Down)
+let touchStartY = 0;
+
+if (sheet) {
+  sheet.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  sheet.addEventListener('touchend', (e) => {
+    const touchEndY = e.changedTouches[0].clientY;
+    const diff = touchStartY - touchEndY;
+
+    // Glissement vers le haut (monte le tiroir)
+    if (diff > 45) {
+      if (sheetState === 'collapsed') reglerTiroir('half');
+      else if (sheetState === 'half') reglerTiroir('expanded');
+    }
+    // Glissement vers le bas (descend le tiroir)
+    else if (diff < -45 && sheet.scrollTop <= 0) {
+      if (sheetState === 'expanded') reglerTiroir('half');
+      else if (sheetState === 'half') reglerTiroir('collapsed');
+    }
+  }, { passive: true });
 }
