@@ -1,5 +1,5 @@
 // ==========================================================================
-// 1. CONFIGURATION DES CATÉGORIES & TROPHÉES 974
+// 1. CONFIGURATION & MAPPING
 // ==========================================================================
 const CATEGORIE_CONFIG = {
   "Rando": { icone: "🥾", couleur: "linear-gradient(135deg, #10b981, #059669)" },
@@ -33,6 +33,8 @@ let currentTab = 'all';
 let currentRegion = 'Tous';
 let currentCategory = 'Toutes';
 let searchQuery = '';
+
+let vueMobileListe = false; // Bascule Carte vs Liste sur téléphone
 
 let map;
 let markers = {};
@@ -120,7 +122,7 @@ function obtenirSpotsFiltres() {
 }
 
 // ==========================================================================
-// 5. MARQUEURS VOLCANIQUES & INTERACTION CROISÉE
+// 5. MARQUEURS SUR LA CARTE
 // ==========================================================================
 function rendreMarqueurs() {
   Object.values(markers).forEach(m => map.removeLayer(m));
@@ -245,9 +247,15 @@ function rendreUI() {
       if (pin) pin.classList.remove('pulse');
     };
 
+    // Sur mobile : cliquer sur une carte revient à la carte et zoome
     card.onclick = () => {
       document.querySelectorAll('.spot-card').forEach(c => c.classList.remove('is-focused'));
       card.classList.add('is-focused');
+
+      if (window.innerWidth <= 860 && vueMobileListe) {
+        basculerVueMobile(); // Ferme la liste pour montrer le lieu sur la carte
+      }
+
       map.flyTo([spot.coordonnees.lat, spot.coordonnees.lng], 13, { duration: 1.2 });
       if (markers[spot.id]) markers[spot.id].openPopup();
     };
@@ -259,7 +267,29 @@ function rendreUI() {
 }
 
 // ==========================================================================
-// 7. ITINÉRAIRE ROADTRIP ROUTIER (OSRM)
+// 7. BASCULE MOBILE CARTE / LISTE
+// ==========================================================================
+function basculerVueMobile() {
+  const sidebar = document.getElementById('sidebar-panel');
+  const icon = document.getElementById('mobile-view-icon');
+  const text = document.getElementById('mobile-view-text');
+
+  vueMobileListe = !vueMobileListe;
+
+  if (vueMobileListe) {
+    sidebar.classList.add('mobile-open');
+    icon.innerText = "🗺️";
+    text.innerText = "Voir la carte";
+  } else {
+    sidebar.classList.remove('mobile-open');
+    icon.innerText = "📋";
+    text.innerText = `Voir la liste (${spots.length})`;
+    setTimeout(() => map.invalidateSize(), 200);
+  }
+}
+
+// ==========================================================================
+// 8. ITINÉRAIRE ROADTRIP ROUTIER (OSRM)
 // ==========================================================================
 function toggleTripStep(id) {
   if (tripSteps.includes(id)) {
@@ -409,7 +439,7 @@ function ouvrirDansGoogleMaps() {
 }
 
 // ==========================================================================
-// 8. ROULETTE & BADGES
+// 9. ROULETTE & BADGES
 // ==========================================================================
 function tirerSortieHasard() {
   const nonVisites = spots.filter(s => !visitedSpots.includes(s.id));
@@ -418,6 +448,10 @@ function tirerSortieHasard() {
   if (!spot) return;
 
   confetti({ particleCount: 90, spread: 60, origin: { y: 0.2 }, colors: ['#FF0844', '#F857A6', '#FFB199', '#FFF'] });
+
+  if (window.innerWidth <= 860 && vueMobileListe) {
+    basculerVueMobile(); // Revient sur la carte pour voir l'effet
+  }
 
   map.flyTo([spot.coordonnees.lat, spot.coordonnees.lng], 14, { duration: 1.5 });
   setTimeout(() => {
@@ -458,7 +492,7 @@ function fermerModalBadges() {
 }
 
 // ==========================================================================
-// 9. ACTIONS & STATS
+// 10. ACTIONS & STATS
 // ==========================================================================
 function toggleVisited(id) {
   visitedSpots = visitedSpots.includes(id) ? visitedSpots.filter(x => x !== id) : [...visitedSpots, id];
@@ -492,6 +526,12 @@ function mettreAJourStats() {
   if (percent > 65) rang = "Marron Expérimenté";
   if (percent >= 100) rang = "Gran Moun 974";
   document.getElementById('badge-title-level').innerText = `Niveau : ${rang}`;
+
+  // Mettre à jour le texte du bouton flottant mobile
+  const mobileBtnText = document.getElementById('mobile-view-text');
+  if (mobileBtnText && !vueMobileListe) {
+    mobileBtnText.innerText = `Voir la liste (${spots.length})`;
+  }
 }
 
 function configurerEcouteurs() {
@@ -522,62 +562,4 @@ function filtrerCategorie(cat) {
   genererBoutonsFiltres();
   rendreMarqueurs();
   rendreUI();
-}// ==========================================================================
-// GESTION DU TIROIR TACTILE MOBILE (BOTTOM SHEET)
-// ==========================================================================
-const sheet = document.getElementById('sidebar-sheet');
-let sheetState = 'collapsed'; // 'collapsed' | 'half' | 'expanded'
-
-function basculerTiroirMobile() {
-  if (window.innerWidth > 860) return;
-
-  if (sheetState === 'collapsed') {
-    reglerTiroir('half');
-  } else if (sheetState === 'half') {
-    reglerTiroir('expanded');
-  } else {
-    reglerTiroir('collapsed');
-  }
-}
-
-function ouvrirTiroirPleinEcran() {
-  if (window.innerWidth <= 860) {
-    reglerTiroir('expanded');
-  }
-}
-
-function reglerTiroir(nouvelEtat) {
-  sheetState = nouvelEtat;
-  sheet.classList.remove('sheet-collapsed', 'sheet-half', 'sheet-expanded');
-  sheet.classList.add(`sheet-${nouvelEtat}`);
-  
-  // Recentrer la carte proprement quand la hauteur change
-  setTimeout(() => {
-    map.invalidateSize();
-  }, 350);
-}
-
-// Support du geste de glissement (Swipe Up / Swipe Down)
-let touchStartY = 0;
-
-if (sheet) {
-  sheet.addEventListener('touchstart', (e) => {
-    touchStartY = e.touches[0].clientY;
-  }, { passive: true });
-
-  sheet.addEventListener('touchend', (e) => {
-    const touchEndY = e.changedTouches[0].clientY;
-    const diff = touchStartY - touchEndY;
-
-    // Glissement vers le haut (monte le tiroir)
-    if (diff > 45) {
-      if (sheetState === 'collapsed') reglerTiroir('half');
-      else if (sheetState === 'half') reglerTiroir('expanded');
-    }
-    // Glissement vers le bas (descend le tiroir)
-    else if (diff < -45 && sheet.scrollTop <= 0) {
-      if (sheetState === 'expanded') reglerTiroir('half');
-      else if (sheetState === 'half') reglerTiroir('collapsed');
-    }
-  }, { passive: true });
 }
