@@ -1,5 +1,5 @@
 // ==========================================================================
-// 1. CONFIGURATION & MAPPING
+// 1. CONFIGURATION
 // ==========================================================================
 const CATEGORIE_CONFIG = {
   "Rando": { icone: "🥾", couleur: "linear-gradient(135deg, #10b981, #059669)" },
@@ -12,15 +12,14 @@ const CATEGORIE_CONFIG = {
 };
 
 const BADGES = [
-  { id: 'premier_pas', nom: 'Zoreil Débarqué', desc: 'Valider un premier spot', icone: '🩴', condition: (v) => v.length >= 1 },
-  { id: 'cinq_spots', nom: 'Explorateur Péi', desc: 'Valider 5 spots sur l\'île', icone: '🎒', condition: (v) => v.length >= 5 },
-  { id: 'cabri_hauts', nom: 'Cabri des Hauts', desc: 'Faire 3 randos ou crêtes', icone: '🐐', condition: (v, s) => s.filter(x => v.includes(x.id) && (x.categorie === 'Rando' || x.micro_region === 'Hauts' || x.micro_region === 'Cirques')).length >= 3 },
-  { id: 'maitre_eau', nom: 'Chasseur de Cascades', desc: 'Visiter 3 bassins', icone: '🏊', condition: (v, s) => s.filter(x => v.includes(x.id) && (x.categorie === 'Bassin')).length >= 3 },
-  { id: 'gran_moun', nom: 'Gran Moun 974', desc: 'Compléter plus de 50% de l\'île', icone: '👑', condition: (v, s) => s.length > 0 && (v.length / s.length) >= 0.5 }
+  { id: 'premier_pas', nom: 'Zoreil Débarqué', desc: 'Valider 1 spot', icone: '🩴', condition: (v) => v.length >= 1 },
+  { id: 'cinq_spots', nom: 'Explorateur Péi', desc: 'Valider 5 spots', icone: '🎒', condition: (v) => v.length >= 5 },
+  { id: 'cabri_hauts', nom: 'Cabri des Hauts', desc: 'Faire 3 randos ou crêtes', icone: '🐐', condition: (v, s) => s.filter(x => v.includes(x.id) && (x.categorie === 'Rando' || x.micro_region === 'Hauts')).length >= 3 },
+  { id: 'maitre_eau', nom: 'Chasseur de Cascades', desc: 'Visiter 3 bassins', icone: '🏊', condition: (v, s) => s.filter(x => v.includes(x.id) && (x.categorie === 'Bassin')).length >= 3 }
 ];
 
 // ==========================================================================
-// 2. ÉTAT GLOBAL
+// 2. ÉTAT DU PROJET
 // ==========================================================================
 let spots = [];
 let visitedSpots = JSON.parse(localStorage.getItem('explore_visited') || '[]');
@@ -34,14 +33,14 @@ let currentRegion = 'Tous';
 let currentCategory = 'Toutes';
 let searchQuery = '';
 
-let vueMobileListe = false; // Bascule Carte vs Liste sur téléphone
+let isListViewOnMobile = false; // Par défaut, carte visible
 
 let map;
 let markers = {};
 let routeLayer = null;
 
 // ==========================================================================
-// 3. INITIALISATION
+// 3. INITIALISATION & FORÇAGE DU RENDU LEAFLET
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
   appliquerTheme(currentTheme);
@@ -70,25 +69,61 @@ function initialiserCarte() {
     attribution: '© OpenStreetMap contributors',
     maxZoom: 19
   }).addTo(map);
+
+  // Correction obligatoire Leaflet sur mobile : recalcule la taille du conteneur après le chargement
+  setTimeout(() => {
+    map.invalidateSize();
+  }, 250);
 }
 
 // ==========================================================================
-// 4. CHARGEMENT DONNÉES
+// 4. BASCULE MOBILE STRICTE (CARTE VS LISTE)
+// ==========================================================================
+function basculerVueMobile() {
+  const sidebar = document.getElementById('sidebar-panel');
+  const icon = document.getElementById('mobile-view-icon');
+  const text = document.getElementById('mobile-view-text');
+
+  isListViewOnMobile = !isListViewOnMobile;
+
+  if (isListViewOnMobile) {
+    sidebar.classList.add('is-visible-mobile');
+    icon.innerText = "🗺️";
+    text.innerText = "Voir la carte";
+  } else {
+    sidebar.classList.remove('is-visible-mobile');
+    icon.innerText = "📋";
+    text.innerText = `Voir la liste (${spots.length})`;
+    // Recalcule immédiatement l'affichage Leaflet quand la carte revient
+    setTimeout(() => {
+      map.invalidateSize();
+    }, 150);
+  }
+}
+
+// ==========================================================================
+// 5. CHARGEMENT DU FICHIER JSON
 // ==========================================================================
 async function chargerDonnees() {
   try {
-    const reponse = await fetch('./spots.json');
-    if (!reponse.ok) throw new Error('Erreur spots.json');
-    spots = await reponse.json();
+    const res = await fetch('./spots.json');
+    if (!res.ok) throw new Error('Impossible de lire spots.json');
+    spots = await res.json();
 
     genererBoutonsFiltres();
     rendreMarqueurs();
     rendreUI();
+
+    // Mise à jour du texte bouton sur mobile
+    const btnText = document.getElementById('mobile-view-text');
+    if (btnText && !isListViewOnMobile) {
+      btnText.innerText = `Voir la liste (${spots.length})`;
+    }
   } catch (err) {
     console.error(err);
     document.getElementById('spots-list').innerHTML = `
-      <div style="padding: 16px; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px; font-size: 13px;">
-        ⚠️ Assure-toi que <b>spots.json</b> est bien sauvegardé.
+      <div style="padding:16px; color:#ef4444; font-size:12px;">
+        Erreur de chargement de spots.json
       </div>
     `;
   }
@@ -122,7 +157,7 @@ function obtenirSpotsFiltres() {
 }
 
 // ==========================================================================
-// 5. MARQUEURS SUR LA CARTE
+// 6. MARQUEURS
 // ==========================================================================
 function rendreMarqueurs() {
   Object.values(markers).forEach(m => map.removeLayer(m));
@@ -150,46 +185,30 @@ function rendreMarqueurs() {
       pinContent = '🔥';
     }
 
-    const iconHtml = `
-      <div id="pin-${spot.id}" class="marker-volcan" style="background: ${pinBg}; width: 34px; height: 34px;">
-        <span style="font-size: 13px;">${pinContent}</span>
-      </div>
-    `;
-
     const customIcon = L.divIcon({
       className: '',
-      html: iconHtml,
-      iconSize: [34, 34],
-      iconAnchor: [17, 17],
-      popupAnchor: [0, -18]
+      html: `<div id="pin-${spot.id}" class="marker-volcan" style="background:${pinBg}; width:32px; height:32px; font-size:13px;">${pinContent}</div>`,
+      iconSize: [32, 32],
+      iconAnchor: [16, 16],
+      popupAnchor: [0, -16]
     });
 
     const marker = L.marker([spot.coordonnees.lat, spot.coordonnees.lng], { icon: customIcon }).addTo(map);
 
     marker.bindPopup(`
-      <div style="font-family: 'Plus Jakarta Sans', sans-serif; min-width: 200px; padding: 4px;">
-        <span style="font-size: 10px; font-weight: 800; text-transform: uppercase; color: #ff5858;">${spot.categorie} • ${spot.commune}</span>
-        <h4 style="font-size: 14px; margin: 4px 0 6px; font-weight: 800;">${spot.nom}</h4>
-        <p style="font-size: 11px; opacity: 0.85; line-height: 1.4; margin-bottom: 8px;">${spot.description}</p>
-        ${spot.conseil_local ? `<div style="font-size: 10px; border-left: 2px solid #ff0844; padding-left: 6px; color: #cbd5e1; font-style: italic;">💡 ${spot.conseil_local}</div>` : ''}
+      <div style="font-family:sans-serif; min-width:180px; padding:4px;">
+        <span style="font-size:9px; font-weight:bold; color:#ff5858; text-transform:uppercase;">${spot.categorie} • ${spot.commune}</span>
+        <h4 style="font-size:14px; margin:4px 0 6px;">${spot.nom}</h4>
+        <p style="font-size:11px; opacity:0.85; line-height:1.4;">${spot.description}</p>
       </div>
     `);
-
-    marker.on('click', () => {
-      const el = document.getElementById(`card-${spot.id}`);
-      if (el) {
-        document.querySelectorAll('.spot-card').forEach(c => c.classList.remove('is-focused'));
-        el.classList.add('is-focused');
-        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    });
 
     markers[spot.id] = marker;
   });
 }
 
 // ==========================================================================
-// 6. LISTE DES CARTES
+// 7. LISTE ET SELECTION
 // ==========================================================================
 function rendreUI() {
   const container = document.getElementById('spots-list');
@@ -198,7 +217,7 @@ function rendreUI() {
   const listeFiltree = obtenirSpotsFiltres();
 
   if (listeFiltree.length === 0) {
-    container.innerHTML = `<div style="text-align: center; padding: 48px 16px; color: var(--text-2); font-size: 13px;">Aucun spot trouvé pour cette sélection 🌋</div>`;
+    container.innerHTML = `<div style="text-align:center; padding:48px 16px; color:var(--text-muted); font-size:13px;">Aucun résultat 🌋</div>`;
   }
 
   listeFiltree.forEach((spot) => {
@@ -219,18 +238,12 @@ function rendreUI() {
         </div>
         <span class="badge-cost ${spot.payant ? 'paid' : 'free'}">${spot.payant ? 'Payant' : 'Gratuit'}</span>
       </div>
-
       <p class="spot-desc">${spot.description}</p>
-      
-      ${spot.conseil_local ? `<div class="conseil-box">💡 ${spot.conseil_local}</div>` : ''}
-
       <div class="card-actions">
-        <div class="meta-info">
-          <span>⏱️ ${spot.duree_estimee || 'Variable'}</span>
-        </div>
+        <div class="meta-info">⏱️ ${spot.duree_estimee || 'Variable'}</div>
         <div class="action-btn-group">
           <button class="btn-action ${isInTrip ? 'active-trip' : ''}" onclick="event.stopPropagation(); toggleTripStep('${spot.id}')">
-            ${isInTrip ? '📍 Étape ' + (tripSteps.indexOf(spot.id) + 1) : '➕ Étape'}
+            ${isInTrip ? 'Étape ' + (tripSteps.indexOf(spot.id) + 1) : '+ Étape'}
           </button>
           <button class="btn-action ${isPrio ? 'active-prio' : ''}" onclick="event.stopPropagation(); togglePriority('${spot.id}')">🔥</button>
           <button class="btn-action ${isDone ? 'active-done' : ''}" onclick="event.stopPropagation(); toggleVisited('${spot.id}')">✓</button>
@@ -238,22 +251,13 @@ function rendreUI() {
       </div>
     `;
 
-    card.onmouseenter = () => {
-      const pin = document.getElementById(`pin-${spot.id}`);
-      if (pin) pin.classList.add('pulse');
-    };
-    card.onmouseleave = () => {
-      const pin = document.getElementById(`pin-${spot.id}`);
-      if (pin) pin.classList.remove('pulse');
-    };
-
-    // Sur mobile : cliquer sur une carte revient à la carte et zoome
+    // Clic sur une carte : revient immédiatement sur la carte mobile et zoome
     card.onclick = () => {
       document.querySelectorAll('.spot-card').forEach(c => c.classList.remove('is-focused'));
       card.classList.add('is-focused');
 
-      if (window.innerWidth <= 860 && vueMobileListe) {
-        basculerVueMobile(); // Ferme la liste pour montrer le lieu sur la carte
+      if (window.innerWidth <= 860 && isListViewOnMobile) {
+        basculerVueMobile(); // Ferme la liste pour afficher la carte
       }
 
       map.flyTo([spot.coordonnees.lat, spot.coordonnees.lng], 13, { duration: 1.2 });
@@ -267,232 +271,7 @@ function rendreUI() {
 }
 
 // ==========================================================================
-// 7. BASCULE MOBILE CARTE / LISTE
-// ==========================================================================
-function basculerVueMobile() {
-  const sidebar = document.getElementById('sidebar-panel');
-  const icon = document.getElementById('mobile-view-icon');
-  const text = document.getElementById('mobile-view-text');
-
-  vueMobileListe = !vueMobileListe;
-
-  if (vueMobileListe) {
-    sidebar.classList.add('mobile-open');
-    icon.innerText = "🗺️";
-    text.innerText = "Voir la carte";
-  } else {
-    sidebar.classList.remove('mobile-open');
-    icon.innerText = "📋";
-    text.innerText = `Voir la liste (${spots.length})`;
-    setTimeout(() => map.invalidateSize(), 200);
-  }
-}
-
-// ==========================================================================
-// 8. ITINÉRAIRE ROADTRIP ROUTIER (OSRM)
-// ==========================================================================
-function toggleTripStep(id) {
-  if (tripSteps.includes(id)) {
-    tripSteps = tripSteps.filter(item => item !== id);
-  } else {
-    tripSteps.push(id);
-  }
-  rendreMarqueurs();
-  rendreUI();
-  calculerItineraire();
-}
-
-async function calculerItineraire() {
-  const panel = document.getElementById('route-panel');
-  if (tripSteps.length < 2) {
-    if (routeLayer) {
-      map.removeLayer(routeLayer);
-      routeLayer = null;
-    }
-    panel.style.display = 'none';
-    return;
-  }
-
-  panel.style.display = 'flex';
-  document.getElementById('route-stats').innerText = "Tracé en cours...";
-
-  const coordonneesStr = tripSteps
-    .map(id => spots.find(s => s.id === id))
-    .filter(Boolean)
-    .map(s => `${s.coordonnees.lng},${s.coordonnees.lat}`)
-    .join(';');
-
-  const url = `https://router.project-osrm.org/route/v1/driving/${coordonneesStr}?overview=full&geometries=geojson`;
-
-  try {
-    const reponse = await fetch(url);
-    const data = await reponse.json();
-    if (!data.routes || data.routes.length === 0) throw new Error();
-
-    const route = data.routes[0];
-    const distanceKm = (route.distance / 1000).toFixed(1);
-    const minutes = Math.round(route.duration / 60);
-    const h = Math.floor(minutes / 60);
-    const m = minutes % 60;
-    const dureeStr = h > 0 ? `${h}h${m < 10 ? '0' : ''}${m}` : `${m} min`;
-
-    document.getElementById('route-stats').innerText = `${distanceKm} km • ~${dureeStr} (${tripSteps.length} étapes)`;
-
-    if (routeLayer) map.removeLayer(routeLayer);
-    routeLayer = L.geoJSON(route.geometry, {
-      style: { color: '#FF0844', weight: 5, opacity: 0.9, dashArray: '1, 8' }
-    }).addTo(map);
-
-    map.fitBounds(routeLayer.getBounds(), { padding: [50, 50] });
-  } catch (err) {
-    document.getElementById('route-stats').innerText = "Tracé indisponible";
-  }
-}
-
-function reinitialiserItineraire() {
-  tripSteps = [];
-  if (routeLayer) {
-    map.removeLayer(routeLayer);
-    routeLayer = null;
-  }
-  document.getElementById('route-panel').style.display = 'none';
-  rendreMarqueurs();
-  rendreUI();
-}
-
-function sauvegarderRoadtripActuel() {
-  if (tripSteps.length < 2) return;
-  const nom = prompt("Donne un nom à cet itinéraire :", `Sortie du ${new Date().toLocaleDateString('fr-FR')}`);
-  if (!nom) return;
-
-  savedRoadtrips.unshift({
-    id: 'trip_' + Date.now(),
-    nom: nom.trim(),
-    etapes: [...tripSteps],
-    date: new Date().toLocaleDateString('fr-FR'),
-    stats: document.getElementById('route-stats').innerText
-  });
-
-  localStorage.setItem('explore_roadtrips', JSON.stringify(savedRoadtrips));
-  alert("Roadtrip consigné avec succès ! Retrouve-le sur l'icône 🗺️.");
-}
-
-function ouvrirModalRoadtrips() {
-  const modal = document.getElementById('roadtrips-modal');
-  const list = document.getElementById('roadtrips-list');
-  list.innerHTML = '';
-
-  if (savedRoadtrips.length === 0) {
-    list.innerHTML = `<div style="text-align:center; padding:24px; color:var(--text-3); font-size:12px;">Aucun itinéraire consigné.</div>`;
-  } else {
-    savedRoadtrips.forEach(trip => {
-      const stops = trip.etapes.map(id => spots.find(s => s.id === id)?.nom).filter(Boolean).join(' ➔ ');
-      list.innerHTML += `
-        <div class="roadtrip-item">
-          <div style="display:flex; justify-content:space-between; align-items:baseline;">
-            <strong style="font-size:14px; color:var(--text-1);">${trip.nom}</strong>
-            <span style="font-size:10px; color:var(--text-3);">${trip.date}</span>
-          </div>
-          <p style="font-size:11px; color:var(--text-2); line-height:1.4;">📍 ${stops}</p>
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px;">
-            <span style="font-size:11px; font-weight:700; color:var(--c-flame);">${trip.stats}</span>
-            <div style="display:flex; gap:6px;">
-              <button class="btn-action active-trip" onclick="chargerRoadtrip('${trip.id}')">🗺️ Charger</button>
-              <button class="btn-action" onclick="supprimerRoadtrip('${trip.id}')" style="color:#ef4444;">🗑️</button>
-            </div>
-          </div>
-        </div>
-      `;
-    });
-  }
-  modal.style.display = 'flex';
-}
-
-function fermerModalRoadtrips() {
-  document.getElementById('roadtrips-modal').style.display = 'none';
-}
-
-function chargerRoadtrip(id) {
-  const t = savedRoadtrips.find(x => x.id === id);
-  if (!t) return;
-  tripSteps = [...t.etapes];
-  rendreMarqueurs();
-  rendreUI();
-  calculerItineraire();
-  fermerModalRoadtrips();
-}
-
-function supprimerRoadtrip(id) {
-  if (!confirm("Supprimer cet itinéraire ?")) return;
-  savedRoadtrips = savedRoadtrips.filter(x => x.id !== id);
-  localStorage.setItem('explore_roadtrips', JSON.stringify(savedRoadtrips));
-  ouvrirModalRoadtrips();
-}
-
-function ouvrirDansGoogleMaps() {
-  if (tripSteps.length === 0) return;
-  const etapes = tripSteps.map(id => spots.find(s => s.id === id)).filter(Boolean);
-  const origine = `${etapes[0].coordonnees.lat},${etapes[0].coordonnees.lng}`;
-  const destination = `${etapes[etapes.length - 1].coordonnees.lat},${etapes[etapes.length - 1].coordonnees.lng}`;
-  const waypoints = etapes.slice(1, -1).map(s => `${s.coordonnees.lat},${s.coordonnees.lng}`).join('|');
-  window.open(`https://www.google.com/maps/dir/?api=1&origin=${origine}&destination=${destination}&waypoints=${waypoints}`, '_blank');
-}
-
-// ==========================================================================
-// 9. ROULETTE & BADGES
-// ==========================================================================
-function tirerSortieHasard() {
-  const nonVisites = spots.filter(s => !visitedSpots.includes(s.id));
-  const pool = nonVisites.length > 0 ? nonVisites : spots;
-  const spot = pool[Math.floor(Math.random() * pool.length)];
-  if (!spot) return;
-
-  confetti({ particleCount: 90, spread: 60, origin: { y: 0.2 }, colors: ['#FF0844', '#F857A6', '#FFB199', '#FFF'] });
-
-  if (window.innerWidth <= 860 && vueMobileListe) {
-    basculerVueMobile(); // Revient sur la carte pour voir l'effet
-  }
-
-  map.flyTo([spot.coordonnees.lat, spot.coordonnees.lng], 14, { duration: 1.5 });
-  setTimeout(() => {
-    if (markers[spot.id]) markers[spot.id].openPopup();
-    const el = document.getElementById(`card-${spot.id}`);
-    if (el) {
-      document.querySelectorAll('.spot-card').forEach(c => c.classList.remove('is-focused'));
-      el.classList.add('is-focused');
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  }, 1000);
-}
-
-function ouvrirModalBadges() {
-  const modal = document.getElementById('badges-modal');
-  const grid = document.getElementById('badges-grid');
-  grid.innerHTML = '';
-
-  BADGES.forEach(b => {
-    const isUnlocked = b.condition(visitedSpots, spots);
-    grid.innerHTML += `
-      <div class="badge-item ${isUnlocked ? 'unlocked' : 'locked'}">
-        <span style="font-size:28px;">${b.icone}</span>
-        <span style="font-weight:800; font-size:13px; color:var(--text-1);">${b.nom}</span>
-        <span style="font-size:11px; color:var(--text-2);">${b.desc}</span>
-        <span style="font-size:10px; font-weight:800; color:${isUnlocked ? '#10b981' : 'var(--text-3)'}">
-          ${isUnlocked ? 'DÉBLOQUÉ ✓' : 'À faire'}
-        </span>
-      </div>
-    `;
-  });
-
-  modal.style.display = 'flex';
-}
-
-function fermerModalBadges() {
-  document.getElementById('badges-modal').style.display = 'none';
-}
-
-// ==========================================================================
-// 10. ACTIONS & STATS
+// 8. ACTIONS, ROADTRIP & STATS
 // ==========================================================================
 function toggleVisited(id) {
   visitedSpots = visitedSpots.includes(id) ? visitedSpots.filter(x => x !== id) : [...visitedSpots, id];
@@ -519,21 +298,139 @@ function mettreAJourStats() {
 
   document.getElementById('progress-text').innerText = `${doneCount} / ${totalCount} (${percent}%)`;
   document.getElementById('progress-bar').style.width = `${percent}%`;
+}
 
-  let rang = "Zoreil Débarqué";
-  if (percent > 15) rang = "Randonneur Dimanche";
-  if (percent > 35) rang = "Cabri des Hauts";
-  if (percent > 65) rang = "Marron Expérimenté";
-  if (percent >= 100) rang = "Gran Moun 974";
-  document.getElementById('badge-title-level').innerText = `Niveau : ${rang}`;
+function toggleTripStep(id) {
+  tripSteps = tripSteps.includes(id) ? tripSteps.filter(x => x !== id) : [...tripSteps, id];
+  rendreMarqueurs();
+  rendreUI();
+  calculerItineraire();
+}
 
-  // Mettre à jour le texte du bouton flottant mobile
-  const mobileBtnText = document.getElementById('mobile-view-text');
-  if (mobileBtnText && !vueMobileListe) {
-    mobileBtnText.innerText = `Voir la liste (${spots.length})`;
+async function calculerItineraire() {
+  const panel = document.getElementById('route-panel');
+  if (tripSteps.length < 2) {
+    if (routeLayer) { map.removeLayer(routeLayer); routeLayer = null; }
+    panel.style.display = 'none';
+    return;
+  }
+
+  panel.style.display = 'flex';
+  document.getElementById('route-stats').innerText = "Tracé...";
+
+  const coordonneesStr = tripSteps
+    .map(id => spots.find(s => s.id === id))
+    .filter(Boolean)
+    .map(s => `${s.coordonnees.lng},${s.coordonnees.lat}`)
+    .join(';');
+
+  try {
+    const res = await fetch(`https://router.project-osrm.org/route/v1/driving/${coordonneesStr}?overview=full&geometries=geojson`);
+    const data = await res.json();
+    const route = data.routes[0];
+    const distanceKm = (route.distance / 1000).toFixed(1);
+    const m = Math.round(route.duration / 60);
+    const h = Math.floor(m / 60);
+    const min = m % 60;
+    const dureeStr = h > 0 ? `${h}h${min < 10 ? '0' : ''}${min}` : `${min} min`;
+
+    document.getElementById('route-stats').innerText = `${distanceKm} km • ~${dureeStr}`;
+
+    if (routeLayer) map.removeLayer(routeLayer);
+    routeLayer = L.geoJSON(route.geometry, { style: { color: '#FF0844', weight: 4 } }).addTo(map);
+    map.fitBounds(routeLayer.getBounds(), { padding: [40, 40] });
+  } catch (e) {
+    document.getElementById('route-stats').innerText = "Erreur itinéraire";
   }
 }
 
+function reinitialiserItineraire() {
+  tripSteps = [];
+  if (routeLayer) { map.removeLayer(routeLayer); routeLayer = null; }
+  document.getElementById('route-panel').style.display = 'none';
+  rendreMarqueurs();
+  rendreUI();
+}
+
+function ouvrirDansGoogleMaps() {
+  if (tripSteps.length === 0) return;
+  const etapes = tripSteps.map(id => spots.find(s => s.id === id)).filter(Boolean);
+  const origine = `${etapes[0].coordonnees.lat},${etapes[0].coordonnees.lng}`;
+  const destination = `${etapes[etapes.length - 1].coordonnees.lat},${etapes[etapes.length - 1].coordonnees.lng}`;
+  const waypoints = etapes.slice(1, -1).map(s => `${s.coordonnees.lat},${s.coordonnees.lng}`).join('|');
+  window.open(`https://www.google.com/maps/dir/?api=1&origin=${origine}&destination=${destination}&waypoints=${waypoints}`, '_blank');
+}
+
+function sauvegarderRoadtripActuel() {
+  if (tripSteps.length < 2) return;
+  const nom = prompt("Nom de l'itinéraire :", `Roadtrip du ${new Date().toLocaleDateString('fr-FR')}`);
+  if (!nom) return;
+  savedRoadtrips.unshift({ id: 'trip_' + Date.now(), nom, etapes: [...tripSteps], stats: document.getElementById('route-stats').innerText });
+  localStorage.setItem('explore_roadtrips', JSON.stringify(savedRoadtrips));
+}
+
+function ouvrirModalRoadtrips() {
+  const modal = document.getElementById('roadtrips-modal');
+  const list = document.getElementById('roadtrips-list');
+  list.innerHTML = savedRoadtrips.length === 0 ? `<div style="text-align:center; padding:20px; font-size:12px;">Aucun roadtrip enregistré.</div>` : '';
+  savedRoadtrips.forEach(trip => {
+    list.innerHTML += `
+      <div class="roadtrip-item">
+        <strong>${trip.nom}</strong>
+        <div style="font-size:11px; color:var(--c-flame);">${trip.stats}</div>
+        <button class="btn-action active-trip" onclick="chargerRoadtrip('${trip.id}')">Charger</button>
+      </div>
+    `;
+  });
+  modal.style.display = 'flex';
+}
+
+function fermerModalRoadtrips() { document.getElementById('roadtrips-modal').style.display = 'none'; }
+function chargerRoadtrip(id) {
+  const t = savedRoadtrips.find(x => x.id === id);
+  if (!t) return;
+  tripSteps = [...t.etapes];
+  rendreMarqueurs();
+  rendreUI();
+  calculerItineraire();
+  fermerModalRoadtrips();
+}
+
+function tirerSortieHasard() {
+  const pool = spots.filter(s => !visitedSpots.includes(s.id));
+  const spot = pool.length > 0 ? pool[Math.floor(Math.random() * pool.length)] : spots[0];
+  if (!spot) return;
+
+  if (window.innerWidth <= 860 && isListViewOnMobile) {
+    basculerVueMobile();
+  }
+
+  map.flyTo([spot.coordonnees.lat, spot.coordonnees.lng], 14, { duration: 1.5 });
+  setTimeout(() => { if (markers[spot.id]) markers[spot.id].openPopup(); }, 1200);
+}
+
+function ouvrirModalBadges() {
+  const modal = document.getElementById('badges-modal');
+  const grid = document.getElementById('badges-grid');
+  grid.innerHTML = '';
+  BADGES.forEach(b => {
+    const isUnlocked = b.condition(visitedSpots, spots);
+    grid.innerHTML += `
+      <div class="badge-item ${isUnlocked ? 'unlocked' : 'locked'}">
+        <div style="font-size:24px;">${b.icone}</div>
+        <strong>${b.nom}</strong>
+        <div style="font-size:11px; color:var(--text-muted);">${b.desc}</div>
+      </div>
+    `;
+  });
+  modal.style.display = 'flex';
+}
+
+function fermerModalBadges() { document.getElementById('badges-modal').style.display = 'none'; }
+
+// ==========================================================================
+// 9. ÉCOUTEURS
+// ==========================================================================
 function configurerEcouteurs() {
   document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
   document.getElementById('search-input').addEventListener('input', (e) => {
