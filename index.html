@@ -8,7 +8,7 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#FF0844">
 
-  <!-- Polices modernes percutantes -->
+  <!-- Polices -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,20 +23,15 @@
 </head>
 <body>
 
-  <!-- Orbes lumineuses de fond pour le Glassmorphism volcanique -->
+  <!-- Orbes lumineuses de fond -->
   <div class="lava-glow glow-1"></div>
   <div class="lava-glow glow-2"></div>
 
   <div class="app-layout">
- <!-- PANNEAU LATÉRAL CONVERTI EN TIROIR TACTILE (BOTTOM SHEET) -->
-    <aside id="sidebar-sheet" class="sidebar glass-panel sheet-collapsed">
+    <!-- PANNEAU LATÉRAL UNIQUE -->
+    <aside id="sidebar-panel" class="sidebar glass-panel">
       
-      <!-- Poignée tactile pour glisser vers le haut / bas sur smartphone -->
-      <div class="sheet-drag-handle" onclick="basculerTiroirMobile()">
-        <div class="drag-pill"></div>
-      </div>
-
-      <!-- En-tête avec dégradé lave -->
+      <!-- En-tête -->
       <header class="header">
         <div class="header-top">
           <div>
@@ -59,10 +54,10 @@
           </div>
         </div>
 
-        <!-- Jauge compacte sur mobile -->
+        <!-- Jauge d'exploration -->
         <div class="progress-box glass-subpanel">
           <div class="progress-labels">
-            <span class="progress-title" id="badge-title-level">Niveau : Débutant</span>
+            <span class="progress-title" id="badge-title-level">Niveau : Zoreil Débarqué</span>
             <span id="progress-text" class="progress-val">0 / 0 (0%)</span>
           </div>
           <div class="progress-track">
@@ -81,55 +76,16 @@
         </button>
       </div>
 
-      <!-- Recherche & Filtres repliables sur mobile -->
+      <!-- Recherche & Filtres -->
       <div class="filters-container">
         <div class="search-wrapper">
-          <input type="text" id="search-input" placeholder="Rechercher (Maïdo, volcan, lagon...)" class="search-input" onfocus="ouvrirTiroirPleinEcran()">
+          <input type="text" id="search-input" placeholder="Rechercher (Maïdo, volcan, lagon...)" class="search-input">
         </div>
 
-        <div class="filter-row-label">Région</div>
+        <div class="filter-row-label">RÉGION</div>
         <div id="regions-chips" class="chips-scroll"></div>
 
-        <div class="filter-row-label">Activité</div>
-        <div id="categories-chips" class="chips-scroll"></div>
-      </div>
-
-      <!-- Liste dynamique des spots -->
-      <main id="spots-list" class="spots-list"></main>
-    </aside>
-
-        <!-- Jauge d'exploration liquide en fusion -->
-        <div class="progress-box glass-subpanel">
-          <div class="progress-labels">
-            <span class="progress-title" id="badge-title-level">Niveau : Débutant</span>
-            <span id="progress-text" class="progress-val">0 / 0 (0%)</span>
-          </div>
-          <div class="progress-track">
-            <div id="progress-bar" class="progress-fill"></div>
-          </div>
-        </div>
-      </header>
-
-      <!-- Onglets Vue Générale vs Priorités -->
-      <div class="tab-group">
-        <button class="tab-btn active" data-tab="all" onclick="changerOnglet('all')">
-          Tous les spots
-        </button>
-        <button class="tab-btn" data-tab="priorites" onclick="changerOnglet('priorites')">
-          🔥 Prévus bientôt <span id="badge-prio-count" class="tab-counter">0</span>
-        </button>
-      </div>
-
-      <!-- Recherche & Filtres sous forme de gélules néon -->
-      <div class="filters-container">
-        <div class="search-wrapper">
-          <input type="text" id="search-input" placeholder="Rechercher (Maïdo, volcan, lagon, rando...)" class="search-input">
-        </div>
-
-        <div class="filter-row-label">Région</div>
-        <div id="regions-chips" class="chips-scroll"></div>
-
-        <div class="filter-row-label">Activité</div>
+        <div class="filter-row-label">ACTIVITÉ</div>
         <div id="categories-chips" class="chips-scroll"></div>
       </div>
 
@@ -138,10 +94,16 @@
     </aside>
 
     <!-- CARTE INTERACTIVE -->
-    <div class="map-wrapper">
+    <div id="map-wrapper" class="map-wrapper">
       <div id="map"></div>
     </div>
   </div>
+
+  <!-- BOUTON FLOTTANT MOBILE : BASCULE CARTE / LISTE -->
+  <button id="mobile-toggle-view" class="mobile-view-btn" onclick="basculerVueMobile()">
+    <span id="mobile-view-icon">📋</span>
+    <span id="mobile-view-text">Voir la liste</span>
+  </button>
 
   <!-- BARRE FLOTTANTE D'ITINÉRAIRE ROADTRIP -->
   <div id="route-panel" class="route-panel glass-panel" style="display: none;">
