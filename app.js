@@ -33,14 +33,14 @@ let currentRegion = 'Tous';
 let currentCategory = 'Toutes';
 let searchQuery = '';
 
-let isListViewOnMobile = false; // Par défaut, carte visible
+let isListViewOnMobile = false;
 
 let map;
 let markers = {};
 let routeLayer = null;
 
 // ==========================================================================
-// 3. INITIALISATION & FORÇAGE DU RENDU LEAFLET
+// 3. INITIALISATION
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
   appliquerTheme(currentTheme);
@@ -70,14 +70,13 @@ function initialiserCarte() {
     maxZoom: 19
   }).addTo(map);
 
-  // Correction obligatoire Leaflet sur mobile : recalcule la taille du conteneur après le chargement
-  setTimeout(() => {
-    map.invalidateSize();
-  }, 250);
+  // Forcer Leaflet à recalculer immédiatement et après délai ses dimensions
+  map.invalidateSize();
+  setTimeout(() => { map.invalidateSize(); }, 250);
 }
 
 // ==========================================================================
-// 4. BASCULE MOBILE STRICTE (CARTE VS LISTE)
+// 4. BASCULE MOBILE
 // ==========================================================================
 function basculerVueMobile() {
   const sidebar = document.getElementById('sidebar-panel');
@@ -94,15 +93,12 @@ function basculerVueMobile() {
     sidebar.classList.remove('is-visible-mobile');
     icon.innerText = "📋";
     text.innerText = `Voir la liste (${spots.length})`;
-    // Recalcule immédiatement l'affichage Leaflet quand la carte revient
-    setTimeout(() => {
-      map.invalidateSize();
-    }, 150);
+    setTimeout(() => { map.invalidateSize(); }, 150);
   }
 }
 
 // ==========================================================================
-// 5. CHARGEMENT DU FICHIER JSON
+// 5. CHARGEMENT JSON
 // ==========================================================================
 async function chargerDonnees() {
   try {
@@ -114,7 +110,6 @@ async function chargerDonnees() {
     rendreMarqueurs();
     rendreUI();
 
-    // Mise à jour du texte bouton sur mobile
     const btnText = document.getElementById('mobile-view-text');
     if (btnText && !isListViewOnMobile) {
       btnText.innerText = `Voir la liste (${spots.length})`;
@@ -251,13 +246,12 @@ function rendreUI() {
       </div>
     `;
 
-    // Clic sur une carte : revient immédiatement sur la carte mobile et zoome
     card.onclick = () => {
       document.querySelectorAll('.spot-card').forEach(c => c.classList.remove('is-focused'));
       card.classList.add('is-focused');
 
       if (window.innerWidth <= 860 && isListViewOnMobile) {
-        basculerVueMobile(); // Ferme la liste pour afficher la carte
+        basculerVueMobile();
       }
 
       map.flyTo([spot.coordonnees.lat, spot.coordonnees.lng], 13, { duration: 1.2 });
